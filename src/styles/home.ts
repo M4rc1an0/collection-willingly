@@ -13,7 +13,6 @@ export const AplicationHome = styled.div`
     width: 100%;
     height: 100%;
     background-color: #835AFD;
-    opacity: 0.9;
 `
 
 export const Question = styled.div`
