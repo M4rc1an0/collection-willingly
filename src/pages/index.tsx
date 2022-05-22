@@ -1,9 +1,10 @@
-import type { NextPage } from 'next'
+import React from 'react'
 import Head from 'next/head'
 import * as S from '../styles/home'
 import { ArrowRight } from '../assets/icons/ArrowRight'
+import Link from 'next/link'
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <S.Container>
       <Head>
@@ -20,12 +21,11 @@ const Home: NextPage = () => {
           </S.Title>
         </S.Question>
         <S.RedirectPage>
-          <S.Ball/>
-          <S.Ball/>
-          <S.Ball/>
-          <S.Icon onClick={() => {alert('deubom')}}>
-            <ArrowRight width={50} height={50} />
-          </S.Icon>
+          <Link href="/home-page">
+            <S.Icon>
+              <ArrowRight width={50} stroke='#545454' />
+            </S.Icon>
+          </Link>
         </S.RedirectPage>
       </S.AplicationHome>
     </S.Container>

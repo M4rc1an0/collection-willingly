@@ -1,8 +1,7 @@
-export const ArrowRight = ({width, height, stroke}: any) => {
+export const ArrowRight = ({width, stroke}: any) => {
     return (
-        <svg width={width ? width : 13} height={height ? height : 21} viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L11.0012 10.0021L1 19.0042" stroke={stroke ? stroke : "black"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <svg width={width ? width : '24'} height={width} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.87988 4.12L13.7599 12L5.87988 19.88L7.99988 22L17.9999 12L7.99988 2L5.87988 4.12Z" fill={stroke ? stroke : "#323232"}/>
         </svg>
-
     )
 }

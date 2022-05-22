@@ -12,61 +12,67 @@ export const AplicationHome = styled.div`
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    background-color: #835AFD;
+    background-color: #00d196;
 `
 
 export const Question = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
-    height: 60%;
+    width: 100%;
+    height: 20%;
     background-color: #F8F8F8;
     border-top-right-radius: 500px;
     border-bottom-right-radius: 500px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    box-shadow: 
+    rgba(0, 0, 0, 0.09) 0px 2px 1px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 `
 
 export const RedirectPage = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 50%;
-    margin: 0 150px;
+    justify-content: center;
+    width: 100%;    
 `
 
-export const Ball = styled.div`
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
+export const Icon = styled.a`
+    width: 130px;
+    height: 130px;
     background-color: #F8F8F8;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-`
-
-export const Icon = styled.div`
-    width: 150px;
     display: flex;
     align-items: center;
-    padding: 50px;
     border-radius: 500px;
-    background-color: #F8F8F8;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    transition: width 1s;
+    box-shadow: 
+    rgba(0, 0, 0, 0.09) 0px 2px 1px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
     cursor: pointer;
 
-    :hover {
-        background-color: white;
+    svg {
+        width: 100%;
+    }  
 
+    :hover {
+        transition: width 1s;
     }
 `
 
 export const Title = styled.h1`
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
+  color: #545454;
   font-family: sans-serif;
 
   a {
-    color: #835AFD;
+    color: #00d196;
     text-decoration: none;
     cursor: pointer;
 
