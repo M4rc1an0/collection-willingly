@@ -13,7 +13,6 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
       <S.AplicationHome>
         <S.Question>
           <S.Title>

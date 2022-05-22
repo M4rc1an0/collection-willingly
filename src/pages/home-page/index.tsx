@@ -1,7 +1,11 @@
 import React from "react";
+import { Header } from "../../components/header";
+import * as S from "./style";
 
-export default function homePage(){
+export default function homePage() {
     return (
-        <>Hello World</>
+        <S.ContainerHome>
+            <Header/>
+        </S.ContainerHome>
     )
 }
