@@ -20,7 +20,7 @@ export const Question = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 90%;
+    height: 70%;
     background-color: #F8F8F8;
     border-top-right-radius: 500px;
     border-bottom-right-radius: 500px;

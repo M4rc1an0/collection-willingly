@@ -6,6 +6,7 @@ export default function homePage() {
     return (
         <S.ContainerHome>
             <Header/>
+            asdasdsad
         </S.ContainerHome>
     )
 }

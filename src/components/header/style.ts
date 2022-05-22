@@ -8,26 +8,45 @@ export const BoxHeader = styled.div`
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `
 
-export const LogoHeader = styled.div`
+export const LogoHeader = styled.a`
     display: flex;
     align-items: center;
     margin: 0 30px;
-    padding: 5px 10px;
+    padding: 5px 5px;
     cursor: pointer;
 
     :hover{
-        background: rgba(181, 181, 181, 0.5);
-        border-radius: 5px;
+        background: rgba(230,232,250);
+        border-radius: 50px;
+
+        svg {
+            path{
+                fill: #00d196;
+            }
+        }
     }
 `
 
 export const Line = styled.div`
     height: 40px;
-    border: 1px solid #323232;
+    border: 1px solid rgb(230,232,250);
 `
 
-export const TitleMenu = styled.div`
-    font-family: cursive;
+export const BoxMenu = styled.div`
+    display: flex;
+    margin: 0 30px;
+`
+
+export const TitleMenu = styled.a`
+    font-family: sans-serif;
     font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
     margin: 15px;
+
+    :hover{
+        background: rgba(230,232,250);
+        border-radius: 40px;
+        color: #00d196;
+    }
 `

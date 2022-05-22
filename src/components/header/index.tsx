@@ -6,19 +6,34 @@ export const Header = () => {
 
     const mockMenu = [
         {
-            text: "Home"
+            text: "Home",
+            link: "/"
         },
         {
-            text: "Sobre"
+            text: "Sobre",
+            link: "/"
+        },
+        {
+            text: "Mock",
+            link: "/"
+        },
+        {
+            text: "Mock",
+            link: "/"
+        },
+        {
+            text: "Mock",
+            link: "/"
         }
     ]
 
     return(
         <S.BoxHeader>
-            <S.LogoHeader>
+            <S.LogoHeader href="/">
                 <World width={30}/>
             </S.LogoHeader>
             <S.Line/>
+            <S.BoxMenu>
             {
                 mockMenu.map(item => {
                     return(
@@ -26,6 +41,7 @@ export const Header = () => {
                     )
                 })
             }
+            </S.BoxMenu>
         </S.BoxHeader>
     )
 }
