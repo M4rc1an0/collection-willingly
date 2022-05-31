@@ -22,7 +22,7 @@ const Home = () => {
         <S.RedirectPage>
           <Link href="/home-page">
             <S.Icon>
-              <ArrowRight width={50} stroke='#545454' />
+              <ArrowRight width={50} stroke='#fff' />
             </S.Icon>
           </Link>
         </S.RedirectPage>

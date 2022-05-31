@@ -4,7 +4,7 @@ export const BoxHeader = styled.div`
     display: flex;
     align-items: center;
     height: 50px;
-    background-color: #00d196;
+    background-color: #161b22;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `
 
@@ -16,12 +16,12 @@ export const LogoHeader = styled.a`
     cursor: pointer;
 
     :hover{
-        background: rgba(230,232,250);
+        background: #fff;
         border-radius: 50px;
 
         svg {
             path{
-                fill: #00d196;
+                fill: #161b22;
             }
         }
     }
@@ -40,13 +40,15 @@ export const BoxMenu = styled.div`
 export const TitleMenu = styled.a`
     font-family: sans-serif;
     font-size: 16px;
+    font-weight: bold;
+    color: #fff;
     cursor: pointer;
     padding: 5px 10px;
     margin: 15px;
+    text-decoration: none;
 
     :hover{
-        background: rgba(230,232,250);
-        border-radius: 40px;
-        color: #00d196;
+        background: #fff;
+        color: #161b22;
     }
 `
