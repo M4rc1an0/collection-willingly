@@ -4,7 +4,7 @@ export const BoxHeader = styled.div`
     display: flex;
     align-items: center;
     height: 50px;
-    background-color: #161b22;
+    background-color: #1A3C40;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `
 

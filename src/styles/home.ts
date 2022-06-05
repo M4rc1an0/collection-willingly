@@ -12,7 +12,7 @@ export const AplicationHome = styled.div`
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    background-color: #202c33;
+    background-color: #417D7A;
 `
 
 export const Question = styled.div`
@@ -21,7 +21,7 @@ export const Question = styled.div`
     justify-content: center;
     width: 100%;
     height: 70%;
-    background-color: #161b22;
+    background-color: #dedede;
     border-top-right-radius: 500px;
     border-bottom-right-radius: 500px;
     box-shadow: 
@@ -42,7 +42,7 @@ export const RedirectPage = styled.div`
 export const Icon = styled.a`
     width: 130px;
     height: 130px;
-    background-color: #161b22;
+    background-color: #dedede;
     display: flex;
     align-items: center;
     border-radius: 500px;
@@ -60,12 +60,12 @@ export const Icon = styled.a`
     }  
 
     :hover {
-        background-color: #fff;
+        background-color: #1D5C63;
         transition: width 1s;
 
         svg {
             path{
-                fill: #161b22;
+                fill: #dedede;
             }
         }
     }
@@ -73,20 +73,21 @@ export const Icon = styled.a`
 
 export const Title = styled.h1`
   margin: 0;
-  line-height: 1.15;
+  line-height: 1.15; 
   font-size: 3rem;
-  color: #fff;
+  color: #1A3C40;
   font-family: sans-serif;
 
   a {
-    padding: 5px;
-    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    color: #1A3C40;
     text-decoration: none;
     cursor: pointer;
 
     :hover {
-        color: #161b22;
-        background-color: #fff;
+        color: #dedede;
+        background-color: #417D7A;
     }
   }
 `

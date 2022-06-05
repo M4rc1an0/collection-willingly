@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerHome = styled.div`
     width: 100%;
     height: 100vh;
-    background-color: #202c33;
+    background-color: #dedede;
 `
 
 export const Centralize = styled.div`

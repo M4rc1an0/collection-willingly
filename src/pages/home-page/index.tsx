@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./style";
-import { Header, InformationBox, Title } from "../../components";
+import { Header, InformationBox, Title, Input, Button } from "../../components";
 import { World } from "../../assets/icons/World";
 
 export default function homePage() {
@@ -11,7 +11,7 @@ export default function homePage() {
             <S.Centralize>
                 <Title text='Por que ajudar o mundo?' />
                 <S.HoverBox>
-                    <World width={200} stroke='#fff' />
+                    <World width={200} stroke='#417D7A' />
                 </S.HoverBox>
                 <InformationBox img='/imgDoacao.jpg'>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -23,6 +23,8 @@ export default function homePage() {
                     Ipsum passages, and more recently with desktop publishing software like Aldus
                     PageMaker including versions of Lorem Ipsum.
                 </InformationBox>
+                <Input label='Teste'/>
+                <Button text='Teste Button'/>
             </S.Centralize>
         </S.ContainerHome>
     )

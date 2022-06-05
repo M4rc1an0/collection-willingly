@@ -4,6 +4,8 @@ import * as S from './style'
 
 const Header = () => {
 
+    // COLOCAR MAIS OPÇÕES DE MENU
+
     const mockMenu = [
         {
             text: "Home",
