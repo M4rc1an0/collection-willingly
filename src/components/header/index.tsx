@@ -8,15 +8,19 @@ const Header = () => {
 
     const mockMenu = [
         {
-            text: "Home",
-            link: "/"
-        },
-        {
-            text: "Doar",
-            link: "/"
-        },
-        {
             text: "Sobre",
+            link: "/"
+        },
+        {
+            text: "Como Ajudar",
+            link: "/"
+        },
+        {
+            text: "Doação",
+            link: "/"
+        },
+        {
+            text: "Contato",
             link: "/"
         }
     ]

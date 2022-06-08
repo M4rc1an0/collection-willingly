@@ -1,30 +1,25 @@
 import React from "react";
 import * as S from "./style";
 import { Header, InformationBox, Title, Input, Button } from "../../components";
-import { World } from "../../assets/icons/World";
 
 export default function homePage() {
 
     return (
         <S.ContainerHome>
-            <Header />
             <S.Centralize>
-                <Title text='Por que ajudar o mundo?' />
-                <S.HoverBox>
-                    <World width={200} stroke='#417D7A' />
-                </S.HoverBox>
-                <InformationBox img='/imgDoacao.jpg'>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was
-                    popularised in the 1960s with the release of Letraset sheets containing Lorem
-                    Ipsum passages, and more recently with desktop publishing software like Aldus
-                    PageMaker including versions of Lorem Ipsum.
-                </InformationBox>
-                <Input label='Teste'/>
-                <Button text='Teste Button'/>
+            <Header />
+            <InformationBox background="#4E7D96" width='60%'>
+                <S.BoxParagrafh>
+                    <S.TitleParagrafh>Sobre</S.TitleParagrafh>
+                    <S.Paragrafh>
+                        Collection-Willingly é uma aplicação desenvolvida para facilitar a 
+                        doação de bens para pessoas em situação de necessidade de forma simples.
+
+
+                    </S.Paragrafh>
+                </S.BoxParagrafh>
+                <S.Img src='./imgDoacao.jpg'/>
+            </InformationBox>
             </S.Centralize>
         </S.ContainerHome>
     )

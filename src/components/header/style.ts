@@ -2,10 +2,13 @@ import styled from "styled-components";
 
 export const BoxHeader = styled.div`
     display: flex;
+    width: 100%;
     align-items: center;
     height: 50px;
-    background-color: #1A3C40;
+    background-color: #4E7D96;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 `
 
 export const LogoHeader = styled.a`
@@ -38,7 +41,6 @@ export const BoxMenu = styled.div`
 `
 
 export const TitleMenu = styled.a`
-    font-family: sans-serif;
     font-size: 16px;
     font-weight: bold;
     color: #fff;
