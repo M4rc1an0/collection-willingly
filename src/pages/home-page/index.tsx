@@ -7,19 +7,21 @@ export default function homePage() {
     return (
         <S.ContainerHome>
             <S.Centralize>
-            <Header />
-            <InformationBox background="#4E7D96" width='60%'>
-                <S.BoxParagrafh>
-                    <S.TitleParagrafh>Sobre</S.TitleParagrafh>
-                    <S.Paragrafh>
-                        Collection-Willingly é uma aplicação desenvolvida para facilitar a 
-                        doação de bens para pessoas em situação de necessidade de forma simples.
+                <Header />
+                <S.Content>
+                    <InformationBox background="#4E7D96" width='60%'>
+                        <S.BoxParagrafh>
+                            <S.TitleParagrafh>Sobre</S.TitleParagrafh>
+                            <S.Paragrafh>
+                                Collection-Willingly é uma aplicação desenvolvida para facilitar a
+                                doação de bens para pessoas em situação de necessidade de forma simples.
 
 
-                    </S.Paragrafh>
-                </S.BoxParagrafh>
-                <S.Img src='./imgDoacao.jpg'/>
-            </InformationBox>
+                            </S.Paragrafh>
+                        </S.BoxParagrafh>
+                        <S.Img src='./imgDoacao.jpg' />
+                    </InformationBox>
+                </S.Content>
             </S.Centralize>
         </S.ContainerHome>
     )

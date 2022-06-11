@@ -22,7 +22,6 @@ export const InputText = styled.input`
 
     :focus:valid+label{
             transform: translate(10px, -10px) scale(.8);
-            font-family: sans-serif;
             color: #1D5C63;
             padding-inline: 5px;
             background-color: #dedede;
@@ -39,7 +38,6 @@ export const LabelInput = styled.label`
     top: 0;
     left: 0;
     color: #1D5C63;
-    font-family: sans-serif;
     transform: translate(10px, 10px);
     transition: transform .25s;
 `

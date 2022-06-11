@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerHome = styled.div`
     width: 100%;
     height: 100vh;
-    background-color: #E3EDF2;
+    background-color: #9FC9DD;
 `
 
 export const Centralize = styled.div`
@@ -11,6 +11,13 @@ export const Centralize = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 0 200px;
+`
+export const Content = styled.div`
+    margin: 0 20px;
+    background-color: #E3EDF2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 `
 
 export const BoxParagrafh = styled.div`
@@ -29,6 +36,7 @@ export const Paragrafh = styled.div`
     font-size: 16px;
     margin: 5px 0;
     color: #0A0D25;
+    font-family: 'Bebas Neue', cursive;
     
 `
 

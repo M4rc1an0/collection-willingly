@@ -13,15 +13,15 @@ const Header = () => {
         },
         {
             text: "Como Ajudar",
-            link: "/"
+            link: "/how-to-help"
         },
         {
             text: "Doação",
-            link: "/"
+            link: "/donation"
         },
         {
             text: "Contato",
-            link: "/"
+            link: "/contact"
         }
     ]
 

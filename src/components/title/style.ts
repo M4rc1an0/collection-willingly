@@ -6,7 +6,6 @@ export const BoxTitle = styled.div`
 `
 
 export const TextTitle = styled.h1`
-    font-family: sans-serif;
     font-size: 32px;
     color: #417D7A;
 `
