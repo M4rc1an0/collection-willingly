@@ -1,7 +1,7 @@
 import * as S from "./style";
 
 const InformationBox = ({children, width, background}: any) => {
-    return(
+    return (
         <S.Section width={width}>
             <S.BoxParagrafh background={background}>
                 {children}

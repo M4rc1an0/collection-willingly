@@ -7,17 +7,22 @@ export const ContainerHome = styled.div`
 `
 
 export const Centralize = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 0 200px;
 `
 export const Content = styled.div`
+    display: flex;
+    padding: 20px;
     margin: 0 20px;
     background-color: #E3EDF2;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+`
+
+export const ContentBox = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 `
 
 export const BoxParagrafh = styled.div`
