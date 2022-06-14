@@ -24,15 +24,16 @@ export const LogoHeader = styled.a`
 
         svg {
             path{
-                fill: #161b22;
+                fill: #4E7D96;
             }
         }
     }
 `
 
 export const Line = styled.div`
+    width: 1.5px;
     height: 40px;
-    border: 1px solid rgb(230,232,250);
+    background-color: #E3EDF2;
 `
 
 export const BoxMenu = styled.div`
@@ -41,8 +42,6 @@ export const BoxMenu = styled.div`
 `
 
 export const TitleMenu = styled.a`
-@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
-
     font-size: 16px;
     font-weight: bold;
     font-family: 'Fascinate', cursive;
@@ -54,6 +53,6 @@ export const TitleMenu = styled.a`
 
     :hover{
         background: #fff;
-        color: #161b22;
+        color: #4E7D96;
     }
 `

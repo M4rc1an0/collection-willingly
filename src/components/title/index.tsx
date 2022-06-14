@@ -1,9 +1,9 @@
 import * as S from './style'
 
-const Title = ({text}: any) => {
+const Title = ({text, size, color}: any) => {
     return (
         <S.BoxTitle>
-            <S.TextTitle>
+            <S.TextTitle color={color} size={size}>
                 {text}
             </S.TextTitle>
         </S.BoxTitle>

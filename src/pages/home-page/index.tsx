@@ -1,9 +1,10 @@
 import React from "react";
 import * as S from "./style";
 import { Header, InformationBox, Title, Input, Button } from "../../components";
+import { Heart } from "../../assets/icons/Heart";
+import { Notebook } from "../../assets/icons/Notebook";
+import { Shield } from "../../assets/icons/Shield";
 import { Snack } from "../../assets/icons/Snack";
-import { Clothes } from "../../assets/icons/Clothes";
-import { Home } from "../../assets/icons/Home";
 
 export default function homePage() {
 
@@ -12,20 +13,66 @@ export default function homePage() {
             <S.Centralize>
                 <Header />
                 <S.Content>
+                    <Title text='VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA' />
+                    {/* <S.ContentBox>
+                        <InformationBox background="#9FC9DD">
+                            <S.ContentInfoBox>
+
+                            </S.ContentInfoBox>
+                        </InformationBox>
+                    </S.ContentBox> */}
                     <S.ContentBox>
-                        <InformationBox background="#4E7D96" width="200px">
-                            <Snack width={100} stroke="#E3EDF2"/>
-                            Alimentos
+                        <InformationBox background="#9FC9DD">
+                            <S.ContentInfoBox>
+                                <S.ParagrafhBold>Saúde</S.ParagrafhBold>
+                                <Heart width={150} stroke="#f84949" />
+                                <S.Paragrafh>
+                                    O seu apoio ajuda a
+                                    reduzir a mortalidade
+                                    infantil e promove um
+                                    crescimento saudável de
+                                    crianças no mundo todo.
+                                </S.Paragrafh>
+                            </S.ContentInfoBox>
                         </InformationBox>
-                        <InformationBox background="#4E7D96" width="200px">
-                            <Clothes width={100} stroke="#E3EDF2" />
-                            Roupas
+                        <InformationBox background="#9FC9DD" >
+                            <S.ContentInfoBox>
+                                <S.ParagrafhBold>Educação</S.ParagrafhBold>
+                                <Notebook width={150} />
+                                <S.Paragrafh>
+                                    Sua doação mantém
+                                    salas de aula em campos
+                                    de refugiados para que
+                                    as crianças tenham
+                                    acesso à educação.
+                                </S.Paragrafh>
+                            </S.ContentInfoBox>
                         </InformationBox>
-                        <InformationBox background="#4E7D96" width="200px">
-                            <Home width={100} stroke="#E3EDF2"/>
-                            Instituições de Caridade
+                        <InformationBox background="#9FC9DD">
+                            <S.ContentInfoBox>
+                                <S.ParagrafhBold>Proteção</S.ParagrafhBold>
+                                <Shield width={150} stroke="#484dda" />
+                                <S.Paragrafh>
+                                Sua contribuição reforça 
+                                iniciativas que 
+                                garante direitos de 
+                                proteção contra abusos 
+                                de crianças e adolescentes.
+                                </S.Paragrafh>
+                            </S.ContentInfoBox>
                         </InformationBox>
-                        <InformationBox background="#4E7D96" width="200px">
+                        <InformationBox background="#9FC9DD" >
+                            <S.ContentInfoBox>
+                            <S.ParagrafhBold>Refeição</S.ParagrafhBold>
+                                <Snack width={150} stroke="#2cb349" />
+                                <S.Paragrafh>
+                                O Alimento doado ajuda
+                                grande quantidade de 
+                                pessoas em situação de  
+                                extrema pobreza e garante
+                                a refeição no dia.
+                                </S.Paragrafh>
+                            </S.ContentInfoBox>
                         </InformationBox>
                     </S.ContentBox>
                 </S.Content>

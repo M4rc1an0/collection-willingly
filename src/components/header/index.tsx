@@ -4,8 +4,6 @@ import * as S from './style'
 
 const Header = () => {
 
-    // COLOCAR MAIS OPÇÕES DE MENU
-
     const mockMenu = [
         {
             text: "Sobre",
@@ -27,7 +25,7 @@ const Header = () => {
 
     return(
         <S.BoxHeader>
-            <S.LogoHeader href="/">
+            <S.LogoHeader href="/home-page">
                 <World width={30} stroke='#fff'/>
             </S.LogoHeader>
             <S.Line/>

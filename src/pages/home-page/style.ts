@@ -11,6 +11,8 @@ export const Centralize = styled.div`
 `
 export const Content = styled.div`
     display: flex;
+    align-items: center;
+    flex-direction: column;
     padding: 20px;
     margin: 0 20px;
     background-color: #E3EDF2;
@@ -37,14 +39,29 @@ export const TitleParagrafh = styled.h2`
     color: #0A0D25;
 `
 
-export const Paragrafh = styled.div`
-    font-size: 16px;
+export const Paragrafh = styled.p`
+    font-size: 15px;
     margin: 5px 0;
-    color: #0A0D25;
+    color: #4E7D96;
     font-family: 'Bebas Neue', cursive;
-    
+`
+
+export const ParagrafhBold = styled.p`
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #4E7D96;
+    font-family: 'Bebas Neue', cursive;
 `
 
 export const Img = styled.img`
     width: 300px;
+`
+
+export const ContentInfoBox = styled.div`
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 `
