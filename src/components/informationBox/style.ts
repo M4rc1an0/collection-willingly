@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 interface PropsSection {
     width?: number
     background?: string
@@ -7,8 +8,9 @@ interface PropsSection {
 
 export const Section = styled.div<PropsSection>`
     width: ${props => props.width ? props.width : '100%'};
-    margin: 20px;
+    margin: 10px;
     display: flex;
+    font-family: 'Lato', sans-serif;
 `
 
 export const BoxParagrafh = styled.div<PropsSection>`

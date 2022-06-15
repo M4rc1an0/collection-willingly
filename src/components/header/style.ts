@@ -12,6 +12,7 @@ export const BoxHeader = styled.div`
 `
 
 export const LogoHeader = styled.a`
+    font-family: 'Lato', sans-serif;
     display: flex;
     align-items: center;
     margin: 0 30px;

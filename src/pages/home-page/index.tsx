@@ -25,7 +25,7 @@ export default function homePage() {
                         <InformationBox background="#9FC9DD">
                             <S.ContentInfoBox>
                                 <S.ParagrafhBold>Saúde</S.ParagrafhBold>
-                                <Heart width={150} stroke="#f84949" />
+                                <Heart width={75} stroke="#f84949" />
                                 <S.Paragrafh>
                                     O seu apoio ajuda a
                                     reduzir a mortalidade
@@ -38,7 +38,7 @@ export default function homePage() {
                         <InformationBox background="#9FC9DD" >
                             <S.ContentInfoBox>
                                 <S.ParagrafhBold>Educação</S.ParagrafhBold>
-                                <Notebook width={150} />
+                                <Notebook width={75} />
                                 <S.Paragrafh>
                                     Sua doação mantém
                                     salas de aula em campos
@@ -51,7 +51,7 @@ export default function homePage() {
                         <InformationBox background="#9FC9DD">
                             <S.ContentInfoBox>
                                 <S.ParagrafhBold>Proteção</S.ParagrafhBold>
-                                <Shield width={150} stroke="#484dda" />
+                                <Shield width={75} stroke="#484dda" />
                                 <S.Paragrafh>
                                 Sua contribuição reforça 
                                 iniciativas que 
@@ -64,7 +64,7 @@ export default function homePage() {
                         <InformationBox background="#9FC9DD" >
                             <S.ContentInfoBox>
                             <S.ParagrafhBold>Refeição</S.ParagrafhBold>
-                                <Snack width={150} stroke="#2cb349" />
+                                <Snack width={75} stroke="#2cb349" />
                                 <S.Paragrafh>
                                 O Alimento doado ajuda
                                 grande quantidade de 

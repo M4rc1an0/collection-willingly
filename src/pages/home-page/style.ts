@@ -40,10 +40,9 @@ export const TitleParagrafh = styled.h2`
 `
 
 export const Paragrafh = styled.p`
-    font-size: 15px;
+    font-size: 16px;
     margin: 5px 0;
     color: #4E7D96;
-    font-family: 'Bebas Neue', cursive;
 `
 
 export const ParagrafhBold = styled.p`
@@ -51,7 +50,6 @@ export const ParagrafhBold = styled.p`
     font-weight: bold;
     margin: 5px 0;
     color: #4E7D96;
-    font-family: 'Bebas Neue', cursive;
 `
 
 export const Img = styled.img`

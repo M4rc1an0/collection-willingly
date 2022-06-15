@@ -71,6 +71,7 @@ export const Icon = styled.a`
 `
 
 export const Title = styled.h1`
+  font-family: 'Lato', sans-serif;
   margin: 0;
   font-weight: bold;
   font-size: 3rem;
