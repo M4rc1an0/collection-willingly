@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerHome = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #9FC9DD;
 `
 
@@ -14,7 +14,7 @@ export const Content = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    margin: 0 20px;
+    margin: 0 20px 20px;
     background-color: #E3EDF2;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-bottom-left-radius: 10px;
@@ -40,6 +40,7 @@ export const TitleParagrafh = styled.h2`
 `
 
 export const Paragrafh = styled.p`
+    text-align: center;
     font-size: 16px;
     margin: 5px 0;
     color: #4E7D96;
@@ -54,6 +55,9 @@ export const ParagrafhBold = styled.p`
 
 export const Img = styled.img`
     width: 300px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `
 
 export const ContentInfoBox = styled.div`

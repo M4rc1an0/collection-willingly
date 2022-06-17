@@ -3,5 +3,15 @@ import Header from "./header";
 import Title from "./title";
 import Input from "./inputText";
 import Button from "./button";
+import Footer from "./footer";
+import SocialIcon from "./socialIcon";
 
-export { InformationBox, Header, Title, Input, Button }
+export { 
+    InformationBox, 
+    Header, 
+    Title, 
+    Input, 
+    Button, 
+    Footer, 
+    SocialIcon 
+}
