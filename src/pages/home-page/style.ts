@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
-interface PropsContentBox {
-    flex?: boolean
-}
-
 interface TextTitleProps {
     color?: string;
+    size?: number
 }
 
 export const ContainerHome = styled.div`
@@ -29,17 +26,17 @@ export const Content = styled.div`
     border-bottom-right-radius: 10px;
 `
 
-export const ContentBox = styled.div<PropsContentBox>`
+export const ContentBox = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-between;
 `
 
 export const BoxParagrafh = styled.div`
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 `
 
 export const TitleParagrafh = styled.h2`
@@ -47,17 +44,17 @@ export const TitleParagrafh = styled.h2`
     color: #0A0D25;
 `
 
-export const Paragrafh = styled.p`
+export const Paragrafh = styled.p<TextTitleProps>`
     text-align: center;
-    font-size: 16px;
+    font-size: ${props => props.size ? props.size : 16}px;
     margin: 20px 0;
-    color: #4E7D96;
+    color: ${props => props.color ? props.color : '#4E7D96'};
 `
 
 export const BoxInformation = styled.div`
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     margin: 20px;
     padding: 10px;
 `
@@ -71,7 +68,7 @@ export const CardParagraph = styled.div`
 export const ParagrafhBold = styled.p<TextTitleProps>`
     font-size: 20px;
     font-weight: bold;
-    margin: 5px 0;
+    margin: 5px 10px;
     color: ${props => props.color ? props.color : '#4E7D96'};
 `
 
@@ -94,4 +91,46 @@ export const ContentInfoBox = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+`
+
+export const ContentBenefits = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+`
+
+export const BenefitsDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+`
+
+export const ContentUl = styled.div`
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+`
+
+export const Ul = styled.ul`
+    
+`
+
+export const Li = styled.li`
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 10px 0;
+`
+
+export const ContentDonate = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+`
+
+export const SendDonate = styled.a`
+    cursor: pointer;
 `

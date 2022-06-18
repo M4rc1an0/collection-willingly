@@ -27,6 +27,9 @@ const Footer = () => {
                     <S.Paragraph>
                         Telefone: 11-48236752
                     </S.Paragraph>
+                    <S.Paragraph>
+                        Cel: 11-99877-5649
+                    </S.Paragraph>
                 </S.ContainerAddress>
             </S.ContainerContent>
             <S.RightsReserved>
@@ -37,7 +40,7 @@ const Footer = () => {
                     <Copyright width={16} stroke='#fff'/>
                 </S.IconBox>
                 <S.Paragraph>
-                    2022
+                    2022 | Desenvolvido por Rogério Marciano
                 </S.Paragraph>
             </S.RightsReserved>
         </S.Container>

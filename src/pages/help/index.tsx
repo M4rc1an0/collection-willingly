@@ -2,7 +2,7 @@ import { Header } from "../../components";
 import * as S from "./style";
 
 
-export default function contact() {
+export default function help() {
     return (
         <S.ContainerHome>
             <S.Centralize>

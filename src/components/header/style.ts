@@ -44,7 +44,6 @@ export const BoxMenu = styled.div`
 export const TitleMenu = styled.a`
     font-size: 16px;
     font-weight: bold;
-    font-family: 'Fascinate', cursive;
     color: #fff;
     cursor: pointer;
     padding: 5px 10px;

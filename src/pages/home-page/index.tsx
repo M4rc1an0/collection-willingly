@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./style";
-import { Header, InformationBox, Title, Input, Button, Footer } from "../../components";
+import { Header, InformationBox, Title, SubTitle, Input, Button, Footer } from "../../components";
 import { Heart } from "../../assets/icons/Heart";
 import { Notebook } from "../../assets/icons/Notebook";
 import { Shield } from "../../assets/icons/Shield";
 import { Snack } from "../../assets/icons/Snack";
 import { Person } from "../../assets/icons/Person";
+import { ArrowRight } from "../../assets/icons/ArrowRight";
+import { SendDonate } from "../../assets/icons/SendDonate";
 
 export default function homePage() {
     const [slider, setSlider] = useState(1)
@@ -40,35 +42,51 @@ export default function homePage() {
         carrousel()
     }, [])
 
+    const liList = [
+        {
+            text: "Ongs",
+        },
+        {
+            text: "Instituições beneficientes",
+        },
+        {
+            text: "Associações beneficientes",
+        },
+        {
+            text: "Projetos sociais",
+        },
+        {
+            text: "Etc.",
+        }
+    ]
+
     return (
         <S.ContainerHome>
             <S.Centralize>
                 <Header />
                 <S.Content>
+                    <Title text='SOBRE' />
+                    <S.BoxImg>
+                        {carrousel()}
+                    </S.BoxImg>
+                    <S.BoxInformation>
+                        <Person width={60} stroke='#FF844B' />
+                        <S.CardParagraph>
+                            Collection Willingly tem como intuito possibilitar
+                            que projetos sociais tenham mais visibilidade e ajuda,
+                            visando o bem-estar de pessoas em situação de pobreza
+                            e necessidade.
+                        </S.CardParagraph>
+                    </S.BoxInformation>
                     <InformationBox background="#9FC9DD">
                         <S.ContentInfoBox>
-                            <Title text='Sobre' />
-                            <S.ContentBox flex={false}>
-                                <S.BoxInformation>
-                                    <Person width={60} stroke='#FF844B' />
-                                    <S.CardParagraph>
-                                        Collection Willingly tem como intuito possibilitar
-                                        que projetos sociais tenham mais visibilidade e ajuda,
-                                        visando o bem-estar de pessoas em situação de pobreza
-                                        e necessidade.
-                                    </S.CardParagraph>
-                                </S.BoxInformation>
-                                <S.BoxImg>
-                                    {carrousel()}
-                                </S.BoxImg>
-                            </S.ContentBox>
                             <S.ParagrafhBold color="#FF844B">
                                 "Precisamos cuidar do planeta e empoderar os que não
                                 tiveram as mesmas oportunidades."
                             </S.ParagrafhBold>
                         </S.ContentInfoBox>
                     </InformationBox>
-                    <Title text='VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA' />
+                    <SubTitle text='VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA' />
                     <S.ContentBox>
                         <InformationBox background="#9FC9DD">
                             <S.ContentInfoBox>
@@ -123,6 +141,38 @@ export default function homePage() {
                             </S.ContentInfoBox>
                         </InformationBox>
                     </S.ContentBox>
+                    <S.ContentInfoBox>
+                        <S.ContentBenefits>
+                            <SubTitle text='QUEM SERÁ BENEFICIADO ?' />
+                            <S.ContentInfoBox>
+                                <S.Paragrafh size={20}>
+                                    Toda arrecadação feita (Alimentos, Roupas, Material Didático, Remédios, etc.)<br />
+                                    será separada e destinada a diversos pontos de arrecadação beneficiente como:
+                                </S.Paragrafh>
+                            </S.ContentInfoBox>
+                            <S.BenefitsDiv>
+                                <S.Img src='./imagem-pobreza.jpg' />
+                                <S.ContentUl>
+                                    <S.Ul>
+                                        {liList.map(institution => {
+                                            const { text } = institution
+                                            return (
+                                                <S.Li><ArrowRight width={20} stroke='#FF844B' /><S.ParagrafhBold>{text}</S.ParagrafhBold></S.Li>
+                                            )
+                                        })}
+                                    </S.Ul>
+                                </S.ContentUl>
+                            </S.BenefitsDiv>
+                        </S.ContentBenefits>
+                    </S.ContentInfoBox>
+                    <S.ContentInfoBox>
+                        <S.ContentDonate>
+                            <SubTitle text='Faça uma doação!' size={32} />
+                            <S.SendDonate href='/donation'>
+                                <SendDonate width={200} strokePrimary='#FF844B' strokeSecondary='#fff' />
+                            </S.SendDonate>
+                        </S.ContentDonate>
+                    </S.ContentInfoBox>
                 </S.Content>
                 <Footer />
             </S.Centralize>

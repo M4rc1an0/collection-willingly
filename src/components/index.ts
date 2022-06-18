@@ -5,6 +5,7 @@ import Input from "./inputText";
 import Button from "./button";
 import Footer from "./footer";
 import SocialIcon from "./socialIcon";
+import SubTitle from "./subTitle";
 
 export { 
     InformationBox, 
@@ -13,5 +14,6 @@ export {
     Input, 
     Button, 
     Footer, 
-    SocialIcon 
+    SocialIcon,
+    SubTitle
 }

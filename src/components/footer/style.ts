@@ -39,7 +39,9 @@ export const ContainerSocial = styled.div`
 `
 
 export const ContainerAddress = styled.div`
+    width: 100%;
     display: flex;
+    align-items: flex-end;
     flex-direction: column;
     margin: 20px 20px;
 `
@@ -61,7 +63,7 @@ export const RightsReserved = styled.div`
 
 export const Line = styled.div`
     width: 1.5px;
-    height: 80px;
+    height: 100px;
     margin: 10px 0;
     background-color: #E3EDF2;
 `
