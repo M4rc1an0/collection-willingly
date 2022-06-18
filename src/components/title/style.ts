@@ -13,6 +13,4 @@ export const BoxTitle = styled.div`
 export const TextTitle = styled.h1<TextTitleProps>`
     font-size: ${props => props.size ? props.size : '32px'};
     color: ${props => props.color ? props.color : '#4E7D96'};
-    text-shadow: rgba(0, 0, 0, 0.35) 2px 3px 2px;
-
 `

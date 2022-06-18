@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+interface PropsContentBox {
+    flex?: boolean
+}
+
+interface TextTitleProps {
+    color?: string;
+}
+
 export const ContainerHome = styled.div`
     width: 100%;
     height: 100%;
@@ -21,7 +29,7 @@ export const Content = styled.div`
     border-bottom-right-radius: 10px;
 `
 
-export const ContentBox = styled.div`
+export const ContentBox = styled.div<PropsContentBox>`
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -42,20 +50,40 @@ export const TitleParagrafh = styled.h2`
 export const Paragrafh = styled.p`
     text-align: center;
     font-size: 16px;
-    margin: 5px 0;
+    margin: 20px 0;
     color: #4E7D96;
 `
 
-export const ParagrafhBold = styled.p`
+export const BoxInformation = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+`
+
+export const CardParagraph = styled.div`
+    text-align: center;
+    font-size: 20px;
+    color: #4E7D96;
+`
+
+export const ParagrafhBold = styled.p<TextTitleProps>`
     font-size: 20px;
     font-weight: bold;
     margin: 5px 0;
-    color: #4E7D96;
+    color: ${props => props.color ? props.color : '#4E7D96'};
+`
+
+export const BoxImg = styled.div`
+    width: 500px;
+    height: 250px;
+    margin: 20px 0;
 `
 
 export const Img = styled.img`
-    width: 300px;
-    margin: 20px 0;
+    width: 500px;
+    height: 250px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `

@@ -7,8 +7,8 @@ export const Container = styled.div`
 `
 
 export const Icon = styled.a`
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: 48px;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -21,11 +21,11 @@ export const Icon = styled.a`
 
     :hover {
         outline-offset: 4px;
-        outline: 2px solid #484dda;
+        outline: 2px solid #FF844B;        
 
         svg{
             path {
-                fill: #484dda;
+                fill: #FF844B;
             }
         }
     }
