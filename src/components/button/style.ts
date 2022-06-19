@@ -7,6 +7,8 @@ interface TextProps {
 
 export const Button = styled.button`
     display: flex;
+    width: 200px;
+    flex-direction: column;
     align-items: center ;
     padding: 5px 10px;
     background-color: #fff;
@@ -15,10 +17,7 @@ export const Button = styled.button`
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    
-    svg {
-        margin: 5px 0px 5px 5px;
-    }
+
 `
 
 export const iconContent = styled.div`

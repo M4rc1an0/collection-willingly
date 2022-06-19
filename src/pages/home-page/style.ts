@@ -13,6 +13,8 @@ export const ContainerHome = styled.div`
 
 export const Centralize = styled.div`
     margin: 0 200px;
+    background-color: #9FC9DD;
+
 `
 
 export const ContentTop = styled.div`

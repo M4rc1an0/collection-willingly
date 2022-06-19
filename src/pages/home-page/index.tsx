@@ -25,7 +25,7 @@ export default function homePage() {
             text: "Projetos sociais",
         },
         {
-            text: "Etc.",
+            text: "Etc...",
         }
     ]
 
@@ -114,8 +114,7 @@ export default function homePage() {
                                 <SubTitle text='QUEM SERÁ BENEFICIADO ?' />
                                 <S.ContentInfoBox>
                                     <S.Paragrafh size={20}>
-                                        Toda arrecadação feita (Alimentos, Roupas, Material Didático, Remédios, etc.)<br />
-                                        será separada e destinada a diversos pontos de arrecadação beneficiente como:
+                                        Toda arrecadação feita será separada e destinada a diversos pontos de arrecadação beneficiente como:
                                     </S.Paragrafh>
                                 </S.ContentInfoBox>
                                 <S.BenefitsDiv>

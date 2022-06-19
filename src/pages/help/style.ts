@@ -20,7 +20,7 @@ export const ContentTop = styled.div`
 export const Content = styled.div`
     display: flex;
     padding: 20px;
-    margin: 0 20px;
+    margin: 0 20px 20px;
     background-color: #E3EDF2;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-bottom-left-radius: 10px;
