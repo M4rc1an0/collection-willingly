@@ -6,10 +6,6 @@ const Header = () => {
 
     const mockMenu = [
         {
-            text: "Como Ajudar",
-            link: "/how-to-help"
-        },
-        {
             text: "Doação",
             link: "/donation"
         },

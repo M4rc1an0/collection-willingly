@@ -1,4 +1,4 @@
-import { Header } from "../../components";
+import { Footer, Header } from "../../components";
 import * as S from "./style";
 
 
@@ -14,6 +14,7 @@ export default function help() {
                         </S.ContentBox>
                     </S.Content>
                 </S.ContentTop>
+                <Footer />
             </S.Centralize>
         </S.ContainerHome>
     )

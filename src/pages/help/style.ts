@@ -7,6 +7,10 @@ export const ContainerHome = styled.div`
 `
 
 export const Centralize = styled.div`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0 200px;
 `
 export const ContentTop = styled.div`

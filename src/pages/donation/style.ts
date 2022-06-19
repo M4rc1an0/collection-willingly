@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+interface TextProps {
+    color?: string;
+    size?: number
+}
+
 export const ContainerHome = styled.div`
     width: 100%;
     height: 100vh;
@@ -7,6 +12,10 @@ export const ContainerHome = styled.div`
 `
 
 export const Centralize = styled.div`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0 200px;
 `
 export const ContentTop = styled.div`
@@ -24,16 +33,12 @@ export const Content = styled.div`
 `
 
 export const ContentBox = styled.div`
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+    width: 100%;    
 `
 
 export const BoxParagrafh = styled.div`
-    width: 100%;
+    margin: 0 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
 `
 
 export const TitleParagrafh = styled.h2`
@@ -41,12 +46,10 @@ export const TitleParagrafh = styled.h2`
     color: #0A0D25;
 `
 
-export const Paragrafh = styled.div`
-    font-size: 16px;
+export const Paragrafh = styled.div<TextProps>`
+    font-size: ${props => props.size ? props.size : 16}px;
     margin: 5px 0;
-    color: #0A0D25;
-    font-family: 'Bebas Neue', cursive;
-    
+    color: ${props => props.color ? props.color : '#4E7D96'};    
 `
 
 export const Img = styled.img`

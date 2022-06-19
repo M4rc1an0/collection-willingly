@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface TextTitleProps {
+interface TextProps {
     color?: string;
     size?: number
 }
@@ -49,7 +49,7 @@ export const TitleParagrafh = styled.h2`
     color: #0A0D25;
 `
 
-export const Paragrafh = styled.p<TextTitleProps>`
+export const Paragrafh = styled.p<TextProps>`
     text-align: center;
     font-size: ${props => props.size ? props.size : 16}px;
     margin: 20px 0;
@@ -70,7 +70,7 @@ export const CardParagraph = styled.div`
     color: #4E7D96;
 `
 
-export const ParagrafhBold = styled.p<TextTitleProps>`
+export const ParagrafhBold = styled.p<TextProps>`
     font-size: 20px;
     font-weight: bold;
     margin: 5px 10px;
