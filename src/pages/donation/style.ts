@@ -7,7 +7,7 @@ interface TextProps {
 
 export const ContainerHome = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #9FC9DD;
 `
 
@@ -58,15 +58,38 @@ export const Img = styled.img`
 
 export const ContentButton = styled.div`
     display: flex;
-    justify-content: space-around;
-    margin: 20px 50px;
-
+    justify-content: space-between;
 `
 
 export const ContentMethods = styled.div`
     width: 100%;
-    height: 700px;
-    background-color: red;
-    /* transition-timing-function: ease ;
-    transition-duration: 2s; */
+    height: 400px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background-color: rgb(159,201,221, 0.5);
+    border: 1px solid #fff;
+    border-radius: 5px;
+`
+
+export const ContentDonation = styled.div`
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(159,201,221, 0.5);
+    border: 1px solid #fff;
+    border-radius: 5px;
+`
+
+export const ChooseDonation = styled.h2`
+    color: #4E7D96;
+`
+
+export const chooseOption = styled.h2`
+    margin: 20px 0;
+    color: #4E7D96;
+    font-weight: bold;
 `
