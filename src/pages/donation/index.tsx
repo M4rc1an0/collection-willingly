@@ -4,14 +4,16 @@ import * as S from "./style";
 export default function donation() {
     return (
         <S.ContainerHome>
-        <S.Centralize>
-            <Header />
-            <S.Content>
-                <S.ContentBox>
+            <S.Centralize>
+                <S.ContentTop>
+                    <Header />
+                    <S.Content>
+                        <S.ContentBox>
 
-                </S.ContentBox>
-            </S.Content>
-        </S.Centralize>
-    </S.ContainerHome>
+                        </S.ContentBox>
+                    </S.Content>
+                </S.ContentTop>
+            </S.Centralize>
+        </S.ContainerHome>
     )
 }

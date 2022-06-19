@@ -6,6 +6,8 @@ import Button from "./button";
 import Footer from "./footer";
 import SocialIcon from "./socialIcon";
 import SubTitle from "./subTitle";
+import CardBoxButton from './cardBoxButton'
+import Carrousel from './carrousel'
 
 export { 
     InformationBox, 
@@ -15,5 +17,7 @@ export {
     Button, 
     Footer, 
     SocialIcon,
-    SubTitle
+    SubTitle,
+    CardBoxButton,
+    Carrousel
 }

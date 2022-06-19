@@ -14,6 +14,11 @@ export const ContainerHome = styled.div`
 export const Centralize = styled.div`
     margin: 0 200px;
 `
+
+export const ContentTop = styled.div`
+    width: 100%;
+`
+
 export const Content = styled.div`
     display: flex;
     align-items: center;
@@ -133,4 +138,16 @@ export const ContentDonate = styled.div`
 
 export const SendDonate = styled.a`
     cursor: pointer;
+
+    :hover {
+        svg {
+            path:nth-child(1) {
+                fill: #fff;
+            }
+
+            path:nth-child(2) {
+                fill: #FF844B;
+            }
+        }
+    }
 `

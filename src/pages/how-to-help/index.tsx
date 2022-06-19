@@ -1,16 +1,19 @@
-import { Header } from '../../components'
+import { Header, Footer } from '../../components'
 import * as S from './style'
 
 export default function howToHelp() {
     return (
         <S.ContainerHome>
             <S.Centralize>
-                <Header />
-                <S.Content>
-                    <S.ContentBox>
+                <S.ContentTop>
+                    <Header />
+                    <S.Content>
+                        <S.ContentBox>
 
-                    </S.ContentBox>
-                </S.Content>
+                        </S.ContentBox>
+                    </S.Content>
+                </S.ContentTop>
+                <Footer />
             </S.Centralize>
         </S.ContainerHome>
     )

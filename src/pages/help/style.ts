@@ -9,6 +9,10 @@ export const ContainerHome = styled.div`
 export const Centralize = styled.div`
     margin: 0 200px;
 `
+export const ContentTop = styled.div`
+    width: 100%;
+`
+
 export const Content = styled.div`
     display: flex;
     padding: 20px;
