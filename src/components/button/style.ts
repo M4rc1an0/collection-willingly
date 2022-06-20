@@ -12,12 +12,16 @@ export const Button = styled.button`
     justify-content: space-between;
     align-items: center ;
     padding: 5px 10px;
-    background-color: #fff;
+    border: 1px solid #fff;
+    background-color: rgb(159,201,221, 0.5);
     font-weight: bold;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
+
+    :hover {
+        background-color: rgb(159,201,221);
+    }
 
 `
 

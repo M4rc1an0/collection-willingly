@@ -27,17 +27,17 @@ export default function donation() {
                             </S.BoxParagrafh>
                             <SubTitle text='Formas de Doação:' />
                             <S.ContentButton>
-                                <Button action={() => setRender(1)} text='Roupas e Cobertores' textColor="#0A0D25" icon={<Clothes width={48} stroke='#0A0D25' />} />
-                                <Button action={() => setRender(2)} text='Alimentos e Remedios' textColor="#0A0D25" icon={<Resources width={48} stroke='#0A0D25' />} />
-                                <Button action={() => setRender(3)} text='Material Didático e Outros' textColor="#0A0D25" icon={<Others width={48} stroke='#0A0D25' />} />
-                                <Button action={() => setRender(4)} text='Transferências ou Dinheiro' textColor="#0A0D25" icon={<Money width={48} stroke='#0A0D25' />} />
+                                <Button action={() => setRender(1)} text='Roupas e Cobertores' textColor="#4E7D96" icon={<Clothes width={48} stroke="#FF844B" />} />
+                                <Button action={() => setRender(2)} text='Alimentos e Remedios' textColor="#4E7D96" icon={<Resources width={48} stroke="#FF844B" />} />
+                                <Button action={() => setRender(3)} text='Material Didático e Outros' textColor="#4E7D96" icon={<Others width={48} stroke="#FF844B" />} />
+                                <Button action={() => setRender(4)} text='Transferências ou Dinheiro' textColor="#4E7D96" icon={<Money width={48} stroke="#FF844B" />} />
                             </S.ContentButton>
                             {/* <S.ContentButton>
                                 <Button action={() => setRender(5)} text='Qr Code/Pix' textColor="#0A0D25" icon={<QrCode width={48} stroke='#0A0D25' />} />
                             </S.ContentButton> */}
                             {render === 0 &&
                                 <S.ContentMethods>
-                                    <S.ChooseDonation>Escolha um tipo de doação</S.ChooseDonation>
+                                    <S.ChooseDonation>Escolha uma forma de doação</S.ChooseDonation>
                                 </S.ContentMethods>
                             }
                             {render === 1 &&
