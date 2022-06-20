@@ -43,6 +43,12 @@ export default function donation() {
                             {render === 1 &&
                                 <S.ContentDonation>
                                     <S.chooseOption>Roupas e Cobertores</S.chooseOption>
+                                    <S.ContentSpace>
+                                        <S.Paragrafh>Para doação de roupas e cobertores dirija-se a algum dos nossos pontos de arrecadação:</S.Paragrafh>
+                                        {/* <S.CollectionAddress>
+                                            Rua Couto de Magalhães, 170<br/>Passo do Feijó, Alvorada - RS
+                                        </S.CollectionAddress> */}
+                                    </S.ContentSpace>
                                 </S.ContentDonation>
                             }
                             {render === 2 &&

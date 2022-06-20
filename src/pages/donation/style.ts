@@ -79,12 +79,29 @@ export const ContentDonation = styled.div`
     width: 100%;
     height: 400px;
     margin-top: 20px;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     background-color: rgb(159,201,221, 0.5);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border: 1px solid #fff;
     border-radius: 5px;
+`
+
+export const ContentSpace = styled.div`
+    margin: 20px 0;
+`
+
+export const CollectionAddress = styled.div`
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+`
+
+export const Address = styled.div`
+
 `
 
 export const ChooseDonation = styled.h2`
@@ -92,7 +109,8 @@ export const ChooseDonation = styled.h2`
 `
 
 export const chooseOption = styled.h2`
-    margin: 20px 0;
+    width: 100%;
+    text-align: center;
     color: #4E7D96;
     font-weight: bold;
 `
