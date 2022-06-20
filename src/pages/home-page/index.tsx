@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import * as S from "./style";
 import { Header, InformationBox, Title, SubTitle, Input, Button, Footer, CardBoxButton, Carrousel } from "../../components";
 import { Heart } from "../../assets/icons/Heart";
@@ -10,6 +11,14 @@ import { ArrowRight } from "../../assets/icons/ArrowRight";
 import { SendDonate } from "../../assets/icons/SendDonate";
 
 export default function homePage() {
+    const[data, setData] = useState()
+
+    useEffect(() => {
+        axios.get('https://collection-willingly-7a1b4-default-rtdb.firebaseio.com/collection_willingly/pages/home_page.json')
+            .then(function (response) {
+                setData(response.data)
+            })
+    }, [])
 
     const liList = [
         {

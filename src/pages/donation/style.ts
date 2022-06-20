@@ -57,8 +57,9 @@ export const Img = styled.img`
 `
 
 export const ContentButton = styled.div`
+    margin: 20px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 `
 
 export const ContentMethods = styled.div`
@@ -69,6 +70,7 @@ export const ContentMethods = styled.div`
     justify-content: center;
     align-items: center ;
     background-color: rgb(159,201,221, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border: 1px solid #fff;
     border-radius: 5px;
 `
@@ -80,6 +82,7 @@ export const ContentDonation = styled.div`
     display: flex;
     justify-content: center;
     background-color: rgb(159,201,221, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border: 1px solid #fff;
     border-radius: 5px;
 `

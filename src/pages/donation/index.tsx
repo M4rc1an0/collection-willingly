@@ -25,14 +25,16 @@ export default function donation() {
                                     remédios, dinheiro e etc.
                                 </S.Paragrafh>
                             </S.BoxParagrafh>
-                            <SubTitle text='Metodos de doação' />
+                            <SubTitle text='Formas de Doação:' />
                             <S.ContentButton>
-                                <Button action={() => setRender(1)} text='Roupas/Cobertores' textColor="#0A0D25" icon={<Clothes width={48} stroke='#0A0D25' />} />
-                                <Button action={() => setRender(2)} text='Alimentos/Remédios' textColor="#0A0D25" icon={<Resources width={48} stroke='#0A0D25' />} />
-                                <Button action={() => setRender(3)} text='M. Didático/Outros' textColor="#0A0D25" icon={<Others width={48} stroke='#0A0D25' />} />
-                                <Button action={() => setRender(4)} text='Cartão/Dinheiro' textColor="#0A0D25" icon={<Money width={48} stroke='#0A0D25' />} />
-                                <Button action={() => setRender(5)} text='Qr Code/Pix' textColor="#0A0D25" icon={<QrCode width={48} stroke='#0A0D25' />} />
+                                <Button action={() => setRender(1)} text='Roupas e Cobertores' textColor="#0A0D25" icon={<Clothes width={48} stroke='#0A0D25' />} />
+                                <Button action={() => setRender(2)} text='Alimentos e Remedios' textColor="#0A0D25" icon={<Resources width={48} stroke='#0A0D25' />} />
+                                <Button action={() => setRender(3)} text='Material Didático e Outros' textColor="#0A0D25" icon={<Others width={48} stroke='#0A0D25' />} />
+                                <Button action={() => setRender(4)} text='Transferências ou Dinheiro' textColor="#0A0D25" icon={<Money width={48} stroke='#0A0D25' />} />
                             </S.ContentButton>
+                            {/* <S.ContentButton>
+                                <Button action={() => setRender(5)} text='Qr Code/Pix' textColor="#0A0D25" icon={<QrCode width={48} stroke='#0A0D25' />} />
+                            </S.ContentButton> */}
                             {render === 0 &&
                                 <S.ContentMethods>
                                     <S.ChooseDonation>Escolha um tipo de doação</S.ChooseDonation>
@@ -55,14 +57,14 @@ export default function donation() {
                             }
                             {render === 4 &&
                                 <S.ContentDonation>
-                                    <S.chooseOption>Cartão e Dinheiro</S.chooseOption>
+                                    <S.chooseOption>Doação em dinheiro</S.chooseOption>
                                 </S.ContentDonation>
                             }
-                            {render === 5 &&
+                            {/* {render === 5 &&
                                 <S.ContentDonation>
                                     <S.chooseOption>Qr Code e Pix</S.chooseOption>
                                 </S.ContentDonation>
-                            }
+                            } */}
                         </S.ContentBox>
                     </S.Content>
                 </S.ContentTop>

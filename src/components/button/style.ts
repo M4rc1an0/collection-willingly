@@ -9,6 +9,7 @@ export const Button = styled.button`
     display: flex;
     width: 200px;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center ;
     padding: 5px 10px;
     background-color: #fff;
