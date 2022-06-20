@@ -19,16 +19,19 @@ const Footer = () => {
                 <S.Line />
                 <S.ContainerAddress>
                     <S.Paragraph>
-                        Rua Couto de Magalhães, 170
-                    </S.Paragraph>
-                    <S.Paragraph>
-                        Passo do Feijó, Alvorada - RS
+                        E-mail: collection_willingly@hotmail.com
                     </S.Paragraph>
                     <S.Paragraph>
                         Telefone: 11-48236752
                     </S.Paragraph>
                     <S.Paragraph>
                         Cel: 11-99877-5649
+                    </S.Paragraph>
+                    <S.Paragraph>
+                        Rua Couto de Magalhães, 170
+                    </S.Paragraph>
+                    <S.Paragraph>
+                        Passo do Feijó, Alvorada - RS
                     </S.Paragraph>
                 </S.ContainerAddress>
             </S.ContainerContent>
@@ -37,7 +40,7 @@ const Footer = () => {
                     Todos os direitos reservados
                 </S.Paragraph>
                 <S.IconBox>
-                    <Copyright width={16} stroke='#fff'/>
+                    <Copyright width={16} stroke='#fff' />
                 </S.IconBox>
                 <S.Paragraph>
                     2022 | Desenvolvido por Rogério Marciano

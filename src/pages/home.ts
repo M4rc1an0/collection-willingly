@@ -71,10 +71,11 @@ export const Icon = styled.a`
 `
 
 export const Title = styled.h1`
-  font-weight: bold;
-  font-size: 3rem;
-  color: #FF844B;
-  margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #FF844B;
+    margin: 0;
 
   a {
     padding: 0 10px;
