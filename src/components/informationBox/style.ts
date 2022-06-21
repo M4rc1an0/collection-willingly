@@ -7,7 +7,7 @@ interface PropsSection {
 }
 
 export const Section = styled.div<PropsSection>`
-    width: ${props => props.width ? props.width : '100%'};
+    width: ${props => props.width && props.width};
     margin: 10px;
     display: flex;
     font-family: 'Lato', sans-serif;

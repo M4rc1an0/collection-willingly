@@ -12,7 +12,6 @@ export const ContainerHome = styled.div`
 `
 
 export const Centralize = styled.div`
-    margin: 0 200px;
     background-color: #9FC9DD;
 
 `
@@ -25,16 +24,38 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
     margin: 0 20px 20px;
     background-color: #E3EDF2;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+
+
+`
+
+export const ImgCarrousel = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+        position: relative;
+    }
+`
+
+export const ContentImg = styled.div`
+    display: flex;
+    background-color: rgb(0,0,0,0.8);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
 `
 
 export const ContentBox = styled.div`
     display: flex;
+    padding: 0 100px;
     width: 100%;
     justify-content: space-between;
 `
@@ -69,7 +90,8 @@ export const BoxInformation = styled.div`
 export const CardParagraph = styled.div`
     text-align: center;
     font-size: 20px;
-    color: #4E7D96;
+    color: #fff;
+    word-break: break-all;
 `
 
 export const ParagrafhBold = styled.p<TextProps>`

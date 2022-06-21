@@ -32,9 +32,7 @@ const Carrousel = () => {
 
 
     return (
-        <S.BoxImg>
-            {carrousel()}
-        </S.BoxImg>
+            carrousel()
     )
 }
 

@@ -10,6 +10,8 @@ import * as S from "./style";
 export default function donation() {
     const [render, setRender] = useState(0)
 
+    // TERMINAR CONTEUDO DAS FORMAS DE DOAÇÃO
+
     return (
         <S.ContainerHome>
             <S.Centralize>

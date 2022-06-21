@@ -11,7 +11,7 @@ import { ArrowRight } from "../../assets/icons/ArrowRight";
 import { SendDonate } from "../../assets/icons/SendDonate";
 
 export default function homePage() {
-    const[data, setData] = useState()
+    const [data, setData] = useState()
 
     useEffect(() => {
         axios.get('https://collection-willingly-7a1b4-default-rtdb.firebaseio.com/collection_willingly/pages/home_page.json')
@@ -44,17 +44,24 @@ export default function homePage() {
                 <S.ContentTop>
                     <Header />
                     <S.Content>
-                        <Title text='SOBRE' />
-                        <S.BoxInformation>
-                            <Person width={60} stroke='#FF844B' />
-                            <S.CardParagraph>
-                                Collection Willingly tem como intuito possibilitar
-                                que projetos sociais tenham mais visibilidade e ajuda,
-                                visando o bem-estar de pessoas em situação de pobreza
-                                e necessidade.
-                            </S.CardParagraph>
-                        </S.BoxInformation>
-                        <Carrousel />
+                        <S.ImgCarrousel>
+                            {/* <Carrousel /> */}
+
+                            {/* TROCAR IMAGENS E ARRUMAR CARROSEL */}
+                            <img src='./criança-feliz.jpg' />
+                            <S.ContentImg>
+                                <Title text='SOBRE' color='#fff'/>
+                                <S.BoxInformation>
+                                    <Person width={60} stroke='#FF844B' />
+                                    <S.CardParagraph>
+                                        Collection Willingly tem como intuito possibilitar<br />
+                                        que projetos sociais tenham mais visibilidade e ajuda,<br />
+                                        visando o bem-estar de pessoas em situação de pobreza<br />
+                                        e necessidade.
+                                    </S.CardParagraph>
+                                </S.BoxInformation>
+                            </S.ContentImg>
+                        </S.ImgCarrousel>
                         <InformationBox background="#9FC9DD">
                             <S.ContentInfoBox>
                                 <S.ParagrafhBold color="#FF844B">
