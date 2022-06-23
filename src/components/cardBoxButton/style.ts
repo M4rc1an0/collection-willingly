@@ -15,7 +15,7 @@ export const Section = styled.div<PropsSection>`
 
 export const BoxParagrafh = styled.button<PropsSection>`
     cursor: pointer;
-    border: 1px solid #fff;
+    border: none;
     display: flex;
     width: 100%;
     padding: 20px;

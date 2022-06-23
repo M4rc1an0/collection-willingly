@@ -8,12 +8,7 @@ interface TextProps {
 export const ContainerHome = styled.div`
     width: 100%;
     height: 100%;
-    background-color: #9FC9DD;
-`
-
-export const Centralize = styled.div`
-    background-color: #9FC9DD;
-
+    background-color: #E3EDF2;
 `
 
 export const ContentTop = styled.div`
@@ -51,13 +46,23 @@ export const ContentImg = styled.div`
     justify-content: center;
     align-items: center;
     position: absolute;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 `
 
 export const ContentBox = styled.div`
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0 100px;
     width: 100%;
-    justify-content: space-between;
+`
+
+export const ContentButtonCards = styled.div`
+    display: flex;
+    justify-content: center;
 `
 
 export const BoxParagrafh = styled.div`
@@ -83,7 +88,7 @@ export const BoxInformation = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 0 10px;
     padding: 10px;
 `
 

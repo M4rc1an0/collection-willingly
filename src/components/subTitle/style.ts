@@ -7,7 +7,7 @@ interface TextTitleProps {
 
 export const BoxTitle = styled.div`
     margin: 10px 0;
-    padding-left: 10px;
+    padding: 5px;
 `
 
 export const TextTitle = styled.h2<TextTitleProps>`
