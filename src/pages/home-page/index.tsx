@@ -122,7 +122,7 @@ export default function homePage() {
                 </S.ContentBox>
                 <S.ContentInfoBox>
                     <S.ContentBenefits>
-                        <SubTitle text='QUEM SERÁ BENEFICIADO ?' />
+                        <SubTitle text='Como é feita a arrecadação ?' />
                         <S.ContentInfoBox>
                             <S.Paragrafh size={20}>
                                 Toda arrecadação feita será separada e destinada a diversos pontos de arrecadação beneficiente como:

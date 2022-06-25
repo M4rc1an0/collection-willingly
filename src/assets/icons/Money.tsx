@@ -1,4 +1,6 @@
-export const Money = ({ width, stroke }: any) => {
+import { PropsIcon } from "./types"
+
+export const Money = ({ width, stroke }: PropsIcon) => {
     return (
         <svg width={width ? width : '24'} height={width} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 9H11.5C11.1022 9 10.7206 9.15804 10.4393 9.43934C10.158 9.72064 10 10.1022 10 10.5V10.5C10 10.8978 10.158 11.2794 10.4393 11.5607C10.7206 11.842 11.1022 12 11.5 12H12.5C12.8978 12 13.2794 12.158 13.5607 12.4393C13.842 12.7206 14 13.1022 14 13.5V13.5C14 13.8978 13.842 14.2794 13.5607 14.5607C13.2794 14.842 12.8978 15 12.5 15H10" stroke={stroke ? stroke : "#323232"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />

@@ -1,4 +1,6 @@
-export const QrCode = ({ width, stroke }: any) => {
+import { PropsIcon } from "./types"
+
+export const QrCode = ({ width, stroke }: PropsIcon) => {
     return (
         <svg width={width ? width : '24'} height={width} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11 11H7V7H11V11ZM17 7H15V9H17V7ZM13 17H17V13H13V17ZM7 17H9V15H7V17Z" stroke={stroke ? stroke : "#323232"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />

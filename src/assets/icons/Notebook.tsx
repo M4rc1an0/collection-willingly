@@ -1,5 +1,6 @@
+import { PropsIcon } from "./types"
 
-export const Notebook = ({ width, stroke }: any) => {
+export const Notebook = ({ width, stroke }: PropsIcon) => {
     return (
         <svg width={width ? width : '24'} height={width} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H20C21.1046 22 22 21.1046 22 20V4C22 2.89543 21.1046 2 20 2Z" fill={stroke ? stroke : "#652D90"} />
