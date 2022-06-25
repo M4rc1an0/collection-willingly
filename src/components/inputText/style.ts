@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 export const InputGroup = styled.div`
     margin: 20px;
-    position: relative;
 `
 
 export const InputText = styled.input`
@@ -24,20 +23,11 @@ export const InputText = styled.input`
             transform: translate(10px, -10px) scale(.8);
             color: #1D5C63;
             padding-inline: 5px;
-            background-color: #dedede;
+            background-color: #E3EDF2;
     }
 
     :is(:focus, :valid) {
         outline-color: #1D5C63;
     }
     
-`
-
-export const LabelInput = styled.label`
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #1D5C63;
-    transform: translate(10px, 10px);
-    transition: transform .25s;
 `
