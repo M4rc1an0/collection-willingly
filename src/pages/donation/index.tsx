@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Bank, Clothes, Message, Money, Others, Phone, QrCode, Resources } from "../../assets/icons";
-import { Footer, Header, Title, SubTitle, Button, InformationBox } from "../../components";
+import { Footer, Header, Title, SubTitle, Button, InformationBox, Card } from "../../components";
 import * as S from "./style";
 
 export default function donation() {
@@ -74,73 +74,93 @@ export default function donation() {
                     {render === 'materials' &&
                         <S.ContentDonation>
                             <S.chooseOption>Material Didático e outros</S.chooseOption>
-                            <S.Paragrafh>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                                magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                                qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                                numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-                                nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
-                                voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-                                quo voluptas nulla pariatur?"
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                                magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                                qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                                numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-                                nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
-                                voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-                                quo voluptas nulla pariatur?"
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                                magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                                qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                                numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-                                nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
-                                voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-                                quo voluptas nulla pariatur?"
-                            </S.Paragrafh>
+                            <S.ContentFlex>
+                                <Card width='350px'>
+                                    <S.ContentSpace>
+                                        <S.Paragrafh color='#FF844B'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                            veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                            magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                                            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                                            numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                                            nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+                                            voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+                                        </S.Paragrafh>
+                                    </S.ContentSpace>
+                                </Card>
+                                <Card width='350px'>
+                                    <S.ContentSpace>
+                                        <S.Paragrafh color='#FF844B'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                            veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                            magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                                            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                                            numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                                            nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+                                            voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+                                        </S.Paragrafh>
+                                    </S.ContentSpace>
+                                </Card>
+                                <Card width='350px'>
+                                    <S.ContentSpace>
+                                        <S.Paragrafh color='#FF844B'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                            veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                            magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                                            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                                            numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                                            nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+                                            voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+                                        </S.Paragrafh>
+                                    </S.ContentSpace>
+                                </Card>
+
+                            </S.ContentFlex>
                         </S.ContentDonation>
                     }
                     {render === 'money' &&
                         <S.ContentDonation>
                             <S.chooseOption>Doação em dinheiro</S.chooseOption>
                             <S.ContentFlex>
-                                <S.ContentSpace>
-                                    <Bank width={100} stroke='#FF844B' />
-                                    <SubTitle text='Conta Bancária' />
-                                    <S.Paragrafh color='#FF844B'>Conta Corrente - 76793-9</S.Paragrafh>
-                                    <S.Paragrafh color='#FF844B'>Agência - 5306</S.Paragrafh>
-                                    <S.Paragrafh color='#FF844B'>Banco - Itaú</S.Paragrafh>
-                                </S.ContentSpace>
-                                <S.ContentSpace>
-                                    <QrCode width={100} stroke='#FF844B' />
-                                    <SubTitle text='Pix ou QrCode' />
-                                    <S.Paragrafh color='#FF844B'>Cpf - 479.972.528.94</S.Paragrafh>
-                                    <S.Paragrafh>ou</S.Paragrafh>
+                                <Card width='250px'>
+                                    <S.ContentSpace>
+                                        <Bank width={100} stroke='#FF844B' />
+                                        <SubTitle text='Conta Bancária' />
+                                        <S.ParagrafhBold color='#000'>Conta Corrente - 76793-9</S.ParagrafhBold>
+                                        <S.ParagrafhBold color='#000'>Agência - 5306</S.ParagrafhBold>
+                                        <S.ParagrafhBold color='#000'>Banco - Itaú</S.ParagrafhBold>
+                                        <S.Paragrafh>ou</S.Paragrafh>
+                                        <S.ParagrafhBold color='#000'>Conta Corrente - 97357-3</S.ParagrafhBold>
+                                        <S.ParagrafhBold color='#000'>Agência - 9647</S.ParagrafhBold>
+                                        <S.ParagrafhBold color='#000'>Banco - Bradesco</S.ParagrafhBold>
 
-                                </S.ContentSpace>
-                                <S.ContentSpace>
-                                    <Money width={100} stroke='#FF844B' />
-                                    <SubTitle text='Dinheiro ou Cartão' />
-                                    <S.Paragrafh>Dirija-se a uma de nossos pontos:</S.Paragrafh>
-                                    <S.Paragrafh color='#FF844B'>Rua Constantino de Sousa, 479 - Campo Belo</S.Paragrafh>
-                                    <S.Paragrafh color='#FF844B'>São Paulo - SP</S.Paragrafh>
-                                    <S.Paragrafh color='#FF844B'>04605-001</S.Paragrafh>
-                                    <S.Paragrafh>ou</S.Paragrafh>
-                                    <S.Paragrafh color="#FF844B">R. Gonzaga - Oswaldo Cruz, 980</S.Paragrafh>
-                                    <S.Paragrafh color="#FF844B">São Caetano do Sul - SP</S.Paragrafh>
-                                    <S.Paragrafh color="#FF844B">09540-110</S.Paragrafh>
-                                </S.ContentSpace>
+                                    </S.ContentSpace>
+                                </Card>
+                                <Card width='250px'>
+                                    <S.ContentSpace>
+                                        <QrCode width={100} stroke='#FF844B' />
+                                        <SubTitle text='Pix ou QrCode' />
+                                        <S.ParagrafhBold color='#000'>Cpf - 479.972.528.94</S.ParagrafhBold>
+                                        <S.Paragrafh>ou</S.Paragrafh>
+                                    </S.ContentSpace>
+                                </Card>
+                                <Card width='250px'>
+                                    <S.ContentSpace>
+                                        <Money width={100} stroke='#FF844B' />
+                                        <SubTitle text='Dinheiro ou Cartão' />
+                                        <S.ParagrafhBold>Dirija-se a um ponto de pagamento:</S.ParagrafhBold>
+                                        <S.ParagrafhBold color='#000'>Rua Constantino de Sousa, 479 - Campo Belo, São Paulo - SP, 04605-001 </S.ParagrafhBold>
+                                        <S.Paragrafh>ou</S.Paragrafh>
+                                        <S.ParagrafhBold color="#000">R. Gonzaga - Oswaldo Cruz, 980, São Caetano do Sul - SP, 09540-110</S.ParagrafhBold>
+                                    </S.ContentSpace>
+                                </Card>
+
                             </S.ContentFlex>
                         </S.ContentDonation>
                     }

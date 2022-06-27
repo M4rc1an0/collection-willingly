@@ -7,19 +7,21 @@ import Button from "./button";
 import Footer from "./footer";
 import SocialIcon from "./socialIcon";
 import SubTitle from "./subTitle";
-import CardBoxButton from './cardBoxButton'
+import CardButton from './cardButton'
 import Carrousel from './carrousel'
+import Card from "./card";
 
-export { 
-    InformationBox, 
-    Header, 
-    Title, 
-    Input, 
+export {
+    InformationBox,
+    Header,
+    Title,
+    Input,
     TextArea,
-    Button, 
-    Footer, 
+    Button,
+    Footer,
     SocialIcon,
     SubTitle,
-    CardBoxButton,
-    Carrousel
+    CardButton,
+    Carrousel,
+    Card
 }

@@ -24,24 +24,23 @@ export const Content = styled.div`
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-
-
 `
 
 export const ImgCarrousel = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+`
 
-    img {
-        width: 100%;
-        position: relative;
-    }
+export const ImgBanner = styled.img`
+    width: 100%;
+    position: relative;
 `
 
 export const ContentImg = styled.div`
     display: flex;
-    background-color: rgb(0,0,0,0.8);
+    /* width: 100%; */
+    background-color: rgb(0,0,0,0.7);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -113,8 +112,6 @@ export const BoxImg = styled.div`
 `
 
 export const Img = styled.img`
-    width: 500px;
-    height: 250px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `

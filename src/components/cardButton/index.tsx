@@ -1,6 +1,6 @@
 import * as S from "./style";
 
-const CardBoxButton = ({children, width}: any) => {
+const CardButton = ({ children, width }: any) => {
     return (
         <S.Section width={width}>
             <S.BoxParagrafh>
@@ -10,4 +10,4 @@ const CardBoxButton = ({children, width}: any) => {
     )
 }
 
-export default CardBoxButton
+export default CardButton

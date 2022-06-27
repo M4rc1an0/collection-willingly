@@ -31,7 +31,10 @@ export const ContainerTitle = styled.div`
 export const ContentBox = styled.div`
     display: flex;
     flex-direction: column;
-    
+`
+
+export const Centralize = styled.div`
+    margin: 0 200px;
 `
 
 export const AlignContent = styled.div`
@@ -44,7 +47,6 @@ export const FormSend = styled.div`
     width: 25%;
     display: flex;
     flex-direction: column;
-    
 `
 
 export const ContentSection = styled.div`

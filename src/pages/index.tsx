@@ -1,9 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import * as S from './home'
-import { ArrowRight } from '../assets/icons/ArrowRight'
 import Link from 'next/link'
-import { World } from '../assets/icons/World'
+import { ArrowRight, World } from '../assets/icons'
 
 const Home = () => {
   return (
@@ -19,7 +18,7 @@ const Home = () => {
           <S.Title>
             Por que <a>Ajudar</a> o mundo ?
           </S.Title>
-          <World width={200} stroke='#4E7D96'/>
+          <World width={200} stroke='#4E7D96' />
         </S.Question>
         <S.RedirectPage>
           <Link href="/home-page">

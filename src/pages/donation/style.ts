@@ -53,6 +53,13 @@ export const Paragrafh = styled.p<TextProps>`
     color: ${props => props.color ? props.color : '#4E7D96'};    
 `
 
+export const ParagrafhBold = styled.p<TextProps>`
+    font-size: ${props => props.size ? props.size : 16}px;
+    font-weight: bold;
+    margin: 5px 10px;
+    color: ${props => props.color ? props.color : '#4E7D96'};
+`
+
 export const Img = styled.img`
     width: 300px;
 `
@@ -60,7 +67,7 @@ export const Img = styled.img`
 export const ContentFlex = styled.div`
     margin: 20px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 `
 
 export const ContentMethods = styled.div`
@@ -103,6 +110,7 @@ export const ContentMaps = styled.div`
 export const CenterItens = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 `
 

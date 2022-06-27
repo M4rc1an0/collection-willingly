@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import * as S from "./style";
-import { Header, InformationBox, Title, SubTitle, Input, Button, Footer, CardBoxButton, Carrousel } from "../../components";
+import { Header, InformationBox, Title, SubTitle, Input, Button, Footer, CardButton, Carrousel } from "../../components";
 import { ArrowRight, Heart, Notebook, Person, SendDonate, Shield, Snack } from "../../assets/icons";
 
 export default function homePage() {
@@ -37,9 +37,7 @@ export default function homePage() {
             <S.ContentTop>
                 <Header />
                 <S.ImgCarrousel>
-                    {/* <Carrousel /> */}
-                    {/* TROCAR IMAGENS E ARRUMAR CARROSEL */}
-                    <img src='./criança-feliz.jpg' />
+                    <S.ImgBanner src='./criança-feliz.jpg' />
                     <S.ContentImg>
                         <Title text='SOBRE' color='#fff' />
                         <S.BoxInformation>
@@ -60,7 +58,7 @@ export default function homePage() {
                 <S.ContentBox>
                     <SubTitle text='VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA' />
                     <S.ContentButtonCards>
-                        <CardBoxButton>
+                        <CardButton width='250px'>
                             <S.ContentInfoBox>
                                 <S.ParagrafhBold>Saúde</S.ParagrafhBold>
                                 <Heart width={75} stroke="#f84949" />
@@ -72,8 +70,8 @@ export default function homePage() {
                                     crianças no mundo todo.
                                 </S.Paragrafh>
                             </S.ContentInfoBox>
-                        </CardBoxButton>
-                        <CardBoxButton>
+                        </CardButton>
+                        <CardButton width='250px'>
                             <S.ContentInfoBox>
                                 <S.ParagrafhBold>Educação</S.ParagrafhBold>
                                 <Notebook width={75} />
@@ -85,8 +83,8 @@ export default function homePage() {
                                     acesso à educação.
                                 </S.Paragrafh>
                             </S.ContentInfoBox>
-                        </CardBoxButton>
-                        <CardBoxButton>
+                        </CardButton>
+                        <CardButton width='250px'>
                             <S.ContentInfoBox>
                                 <S.ParagrafhBold>Proteção</S.ParagrafhBold>
                                 <Shield width={75} stroke="#484dda" />
@@ -98,8 +96,8 @@ export default function homePage() {
                                     de crianças e adolescentes.
                                 </S.Paragrafh>
                             </S.ContentInfoBox>
-                        </CardBoxButton>
-                        <CardBoxButton>
+                        </CardButton>
+                        <CardButton width='250px'>
                             <S.ContentInfoBox>
                                 <S.ParagrafhBold>Refeição</S.ParagrafhBold>
                                 <Snack width={75} stroke="#2cb349" />
@@ -111,7 +109,7 @@ export default function homePage() {
                                     a refeição no dia-a-dia.
                                 </S.Paragrafh>
                             </S.ContentInfoBox>
-                        </CardBoxButton>
+                        </CardButton>
                     </S.ContentButtonCards>
                 </S.ContentBox>
                 <S.ContentInfoBox>
@@ -126,10 +124,10 @@ export default function homePage() {
                             <S.Img src='./imagem-pobreza.jpg' />
                             <S.ContentUl>
                                 <S.Ul>
-                                    {liList.map(institution => {
+                                    {liList.map((institution, key) => {
                                         const { text } = institution
                                         return (
-                                            <S.Li><ArrowRight width={20} stroke='#FF844B' /><S.ParagrafhBold>{text}</S.ParagrafhBold></S.Li>
+                                            <S.Li><ArrowRight width={20} stroke='#FF844B' /><S.ParagrafhBold key={text}>{text}</S.ParagrafhBold></S.Li>
                                         )
                                     })}
                                 </S.Ul>
