@@ -33,7 +33,7 @@ export default function donation() {
                         </S.ContentMethods>
                     }
                     {render === 'clothes' &&
-                        <S.ContentDonation>
+                        <>
                             <S.chooseOption>Roupas e Cobertores</S.chooseOption>
                             <S.ContentSpace>
                                 <S.Paragrafh>Para doação de roupas e cobertores dirija-se a algum dos nossos pontos de arrecadação:</S.Paragrafh>
@@ -52,10 +52,10 @@ export default function donation() {
                                     </S.CenterItens>
                                 </S.ContentMaps>
                             </S.ContentSpace>
-                        </S.ContentDonation>
+                        </>
                     }
                     {render === 'food' &&
-                        <S.ContentDonation>
+                        <>
                             <S.chooseOption>Alimentos e Remédios</S.chooseOption>
                             <S.ContentSpace>
                                 <S.Paragrafh>Para doação de alimentos e remédios, entre em contato com a instituição de arrecadação alimenticia:</S.Paragrafh>
@@ -68,11 +68,12 @@ export default function donation() {
                                     <Message width={75} stroke='#00c925' />
                                     <S.Paragrafh>Mande uma mensagem</S.Paragrafh>
                                 </S.ButtonWpp>
+                                <S.Paragrafh>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</S.Paragrafh>
                             </S.ContentSpace>
-                        </S.ContentDonation>
+                        </>
                     }
                     {render === 'materials' &&
-                        <S.ContentDonation>
+                        <>
                             <S.chooseOption>Material Didático e outros</S.chooseOption>
                             <S.ContentFlex>
                                 <Card width='350px'>
@@ -122,10 +123,10 @@ export default function donation() {
                                 </Card>
 
                             </S.ContentFlex>
-                        </S.ContentDonation>
+                        </>
                     }
                     {render === 'money' &&
-                        <S.ContentDonation>
+                        <>
                             <S.chooseOption>Doação em dinheiro</S.chooseOption>
                             <S.ContentFlex>
                                 <Card width='250px'>
@@ -162,7 +163,7 @@ export default function donation() {
                                 </Card>
 
                             </S.ContentFlex>
-                        </S.ContentDonation>
+                        </>
                     }
                 </S.ContentBox>
             </S.ContentTop>
