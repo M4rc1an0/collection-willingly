@@ -1,11 +1,5 @@
 import { useEffect, useState } from "react";
-import { Clothes } from "../../assets/icons/Clothes";
-import { Message } from "../../assets/icons/Message";
-import { Money } from "../../assets/icons/Money";
-import { Others } from "../../assets/icons/Others";
-import { Phone } from "../../assets/icons/Phone";
-import { QrCode } from "../../assets/icons/QrCode";
-import { Resources } from "../../assets/icons/Resources";
+import { Bank, Clothes, Message, Money, Others, Phone, QrCode, Resources } from "../../assets/icons";
 import { Footer, Header, Title, SubTitle, Button, InformationBox } from "../../components";
 import * as S from "./style";
 
@@ -27,15 +21,12 @@ export default function donation() {
                 <Header />
                 <S.ContentBox>
                     <SubTitle text='Formas de Doação:' />
-                    <S.ContentButton>
+                    <S.ContentFlex>
                         <Button action={() => setValueStorage('clothes')} text='Roupas e Cobertores' textColor="#4E7D96" icon={<Clothes width={48} stroke="#FF844B" />} />
                         <Button action={() => setValueStorage('food')} text='Alimentos e Remedios' textColor="#4E7D96" icon={<Resources width={48} stroke="#FF844B" />} />
                         <Button action={() => setValueStorage('materials')} text='Material Didático e Outros' textColor="#4E7D96" icon={<Others width={48} stroke="#FF844B" />} />
                         <Button action={() => setValueStorage('money')} text='Transferências ou Dinheiro' textColor="#4E7D96" icon={<Money width={48} stroke="#FF844B" />} />
-                    </S.ContentButton>
-                    {/* <S.ContentButton>
-                                <Button action={() => setRender(5)} text='Qr Code/Pix' textColor="#0A0D25" icon={<QrCode width={48} stroke='#0A0D25' />} />
-                            </S.ContentButton> */}
+                    </S.ContentFlex>
                     {!render &&
                         <S.ContentMethods>
                             <S.ChooseDonation>Escolha uma forma de doação</S.ChooseDonation>
@@ -83,18 +74,76 @@ export default function donation() {
                     {render === 'materials' &&
                         <S.ContentDonation>
                             <S.chooseOption>Material Didático e outros</S.chooseOption>
+                            <S.Paragrafh>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                                qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                                numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                                nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+                                voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+                                quo voluptas nulla pariatur?"
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                                qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                                numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                                nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+                                voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+                                quo voluptas nulla pariatur?"
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                                qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                                numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                                nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+                                voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+                                quo voluptas nulla pariatur?"
+                            </S.Paragrafh>
                         </S.ContentDonation>
                     }
                     {render === 'money' &&
                         <S.ContentDonation>
                             <S.chooseOption>Doação em dinheiro</S.chooseOption>
+                            <S.ContentFlex>
+                                <S.ContentSpace>
+                                    <Bank width={100} stroke='#FF844B' />
+                                    <SubTitle text='Conta Bancária' />
+                                    <S.Paragrafh color='#FF844B'>Conta Corrente - 76793-9</S.Paragrafh>
+                                    <S.Paragrafh color='#FF844B'>Agência - 5306</S.Paragrafh>
+                                    <S.Paragrafh color='#FF844B'>Banco - Itaú</S.Paragrafh>
+                                </S.ContentSpace>
+                                <S.ContentSpace>
+                                    <QrCode width={100} stroke='#FF844B' />
+                                    <SubTitle text='Pix ou QrCode' />
+                                    <S.Paragrafh color='#FF844B'>Cpf - 479.972.528.94</S.Paragrafh>
+                                    <S.Paragrafh>ou</S.Paragrafh>
+
+                                </S.ContentSpace>
+                                <S.ContentSpace>
+                                    <Money width={100} stroke='#FF844B' />
+                                    <SubTitle text='Dinheiro ou Cartão' />
+                                    <S.Paragrafh>Dirija-se a uma de nossos pontos:</S.Paragrafh>
+                                    <S.Paragrafh color='#FF844B'>Rua Constantino de Sousa, 479 - Campo Belo</S.Paragrafh>
+                                    <S.Paragrafh color='#FF844B'>São Paulo - SP</S.Paragrafh>
+                                    <S.Paragrafh color='#FF844B'>04605-001</S.Paragrafh>
+                                    <S.Paragrafh>ou</S.Paragrafh>
+                                    <S.Paragrafh color="#FF844B">R. Gonzaga - Oswaldo Cruz, 980</S.Paragrafh>
+                                    <S.Paragrafh color="#FF844B">São Caetano do Sul - SP</S.Paragrafh>
+                                    <S.Paragrafh color="#FF844B">09540-110</S.Paragrafh>
+                                </S.ContentSpace>
+                            </S.ContentFlex>
                         </S.ContentDonation>
                     }
-                    {/* {render === 5 &&
-                                <S.ContentDonation>
-                                    <S.chooseOption>Qr Code e Pix</S.chooseOption>
-                                </S.ContentDonation>
-                            } */}
                 </S.ContentBox>
             </S.ContentTop>
             <Footer />

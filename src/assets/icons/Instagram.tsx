@@ -1,6 +1,6 @@
 import { PropsIcon } from "./types"
 
-export const Instagram = ({width, stroke}: PropsIcon) => {
+const Instagram = ({width, stroke}: PropsIcon) => {
     return (
         <svg width={width ? width : '24'} height={width} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 18.8C14.5 18.8 13.2 17.6 13.2 16C13.2 14.5 14.4 13.2 16 13.2C17.5 13.2 18.8 14.4 18.8 16C18.8 17.5 17.5 18.8 16 18.8Z" fill="white" />
@@ -10,3 +10,5 @@ export const Instagram = ({width, stroke}: PropsIcon) => {
 
     )
 }
+
+export default Instagram

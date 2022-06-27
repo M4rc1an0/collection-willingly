@@ -2,6 +2,7 @@ import InformationBox from "./informationBox";
 import Header from "./header";
 import Title from "./title";
 import Input from "./inputText";
+import TextArea from "./textArea";
 import Button from "./button";
 import Footer from "./footer";
 import SocialIcon from "./socialIcon";
@@ -14,6 +15,7 @@ export {
     Header, 
     Title, 
     Input, 
+    TextArea,
     Button, 
     Footer, 
     SocialIcon,

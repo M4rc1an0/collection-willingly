@@ -1,10 +1,17 @@
 import { useState } from "react";
-import { Footer, Header, Input, SubTitle, Title } from "../../components";
+import { Here } from "../../assets/icons/Here";
+import { Button, Footer, Header, Input, SubTitle, TextArea, Title } from "../../components";
 import * as S from "./style";
 
 
 export default function help() {
-    const [name, setName] = useState()
+    const [formValues, setFormValues] = useState<any>({})
+
+    const handleInputChange = (e: any) => {
+        const {name, value} = e.target;
+        setFormValues({ ...formValues, [name]: value})
+    }
+
     return (
         <S.Container>
             <Header />
@@ -40,8 +47,20 @@ export default function help() {
                             </S.ContentSection>
                         </S.ContentBox>
                         <S.FormSend>
-                            {/* MELHORAR INPUT TEXT E FAZE FORMULARIO */}
-                            <Input label='Nome' value={name} change={(e: any) => setName(e.target.value)}/>
+                            <SubTitle text='Dúvidas ou sugestões ?' />
+                            <S.Paragrafh>
+                                Nome:
+                            </S.Paragrafh>
+                            <Input name='name' change={handleInputChange} value={formValues.name || ''} />
+                            <S.Paragrafh>
+                                E-mail:
+                            </S.Paragrafh>
+                            <Input name='email' change={handleInputChange} value={formValues.email || ''} />
+                            <S.Paragrafh>
+                                Dúvida ou sugestão:
+                            </S.Paragrafh>
+                            <TextArea name='text' change={handleInputChange} value={formValues.text || ''}/>
+                            <Button text='Enviar' onClick={() => setFormValues({...formValues.name})}/>
                         </S.FormSend>
                     </S.AlignContent>
                 </S.ContentPage>

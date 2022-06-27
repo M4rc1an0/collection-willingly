@@ -1,5 +1,5 @@
 import React from "react"
-import { World } from "../../assets/icons/World"
+import { World } from "../../assets/icons"
 import * as S from './style'
 
 const Header = () => {

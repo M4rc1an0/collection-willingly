@@ -57,7 +57,7 @@ export const Img = styled.img`
     width: 300px;
 `
 
-export const ContentButton = styled.div`
+export const ContentFlex = styled.div`
     margin: 20px 0;
     display: flex;
     justify-content: space-around;

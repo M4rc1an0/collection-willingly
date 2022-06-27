@@ -13,7 +13,7 @@ export const Button = styled.button`
     align-items: center ;
     padding: 5px 10px;
     border: none;
-    background-color: rgb(159,201,221, 0.7);
+    background-color: rgb(159,201,221);
     font-weight: bold;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;

@@ -2,13 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import * as S from "./style";
 import { Header, InformationBox, Title, SubTitle, Input, Button, Footer, CardBoxButton, Carrousel } from "../../components";
-import { Heart } from "../../assets/icons/Heart";
-import { Notebook } from "../../assets/icons/Notebook";
-import { Shield } from "../../assets/icons/Shield";
-import { Snack } from "../../assets/icons/Snack";
-import { Person } from "../../assets/icons/Person";
-import { ArrowRight } from "../../assets/icons/ArrowRight";
-import { SendDonate } from "../../assets/icons/SendDonate";
+import { ArrowRight, Heart, Notebook, Person, SendDonate, Shield, Snack } from "../../assets/icons";
 
 export default function homePage() {
     const [data, setData] = useState()

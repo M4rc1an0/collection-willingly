@@ -1,8 +1,5 @@
+import { Facebook, Instagram, WhatsApp, World } from '../../assets/icons'
 import * as S from './style'
-import { World } from '../../assets/icons/World'
-import { Facebook } from '../../assets/icons/Facebook'
-import { Instagram } from '../../assets/icons/Instagram'
-import { WhatsApp } from '../../assets/icons/WhatsApp'
 
 const SocialIcon = ({ icon }: any) => {
 

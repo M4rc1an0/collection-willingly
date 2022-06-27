@@ -1,11 +1,10 @@
 import * as S from "./style";
 
-const Input = ({value, change}: any) => {
+const Input = ({value, change, name}: any) => {
 
-    // REFAZER INPUTTEXT
     return(
         <S.InputGroup>
-            <S.InputText type='text' value={value} onChange={change}id='name'/>
+            <S.InputText name={name} onChange={change} value={value}/>
         </S.InputGroup>
     )
 }

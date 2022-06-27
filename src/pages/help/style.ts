@@ -41,6 +41,7 @@ export const AlignContent = styled.div`
 `
 
 export const FormSend = styled.div`
+    width: 25%;
     display: flex;
     flex-direction: column;
     

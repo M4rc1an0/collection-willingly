@@ -1,5 +1,4 @@
-import { Copyright } from '../../assets/icons/Copyright'
-import { World } from '../../assets/icons/World'
+import { Copyright, World } from '../../assets/icons'
 import SocialIcon from '../socialIcon'
 import * as S from './style'
 
