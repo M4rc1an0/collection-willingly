@@ -141,7 +141,7 @@ export const Li = styled.li`
     display: flex;
     align-items: center;
     list-style: none;
-    margin: 10px 0;
+    margin: 20px 0;
 `
 
 export const ContentDonate = styled.div`
@@ -165,4 +165,21 @@ export const SendDonate = styled.a`
             }
         }
     }
+`
+
+export const OpacityModal = styled.div`
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.8);
+`
+
+export const Modal = styled.div`
+    background-color: #fff;
+    color: #000;
+    width: 60%;
+    height: 60%;
 `

@@ -1,8 +1,8 @@
 import * as S from "./style";
 
-const CardButton = ({ children, width }: any) => {
+const CardButton = ({ children, width, action }: any) => {
     return (
-        <S.Section width={width}>
+        <S.Section width={width} onClick={action}>
             <S.BoxParagrafh>
                 {children}
             </S.BoxParagrafh>
