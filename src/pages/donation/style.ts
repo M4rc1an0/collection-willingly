@@ -31,7 +31,7 @@ export const ImgBox = styled.div`
 export const ImgBanner = styled.img`
     width: 100%;
     position: relative;
-    -webkit-mask-image: linear-gradient(to top, transparent, black 100%);
+    mask-image: linear-gradient(to top, transparent, black 100%);
 `
 
 export const ContentImg = styled.div`
@@ -128,10 +128,17 @@ export const ContentSpace = styled.div`
     margin: 20px 0;
 `
 
+export const ContentQrCode = styled.div`
+    background-color: #fff;
+    border: 2px solid #FF844B;
+    padding: 20px;
+`
+
 export const ContentMaps = styled.div`
     display: flex;
     width: 70%;
     justify-content: space-around;
+    margin-top: 20px;
 `
 
 export const CenterItens = styled.div`

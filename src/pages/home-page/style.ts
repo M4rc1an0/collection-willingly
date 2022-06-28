@@ -15,17 +15,6 @@ export const ContentTop = styled.div`
     width: 100%;
 `
 
-export const Content = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 20px 20px;
-    background-color: #E3EDF2;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-`
-
 export const ImgCarrousel = styled.div`
     display: flex;
     justify-content: center;
@@ -35,7 +24,7 @@ export const ImgCarrousel = styled.div`
 export const ImgBanner = styled.img`
     width: 100%;
     position: relative;
-    -webkit-mask-image: linear-gradient(to top, transparent, black 100%);
+    mask-image: linear-gradient(to top, transparent, black 100%);
 `
 
 export const ContentImg = styled.div`
@@ -49,38 +38,6 @@ export const ContentImg = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-`
-
-export const ContentBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 100px;
-    width: 100%;
-`
-
-export const ContentButtonCards = styled.div`
-    display: flex;
-    justify-content: center;
-`
-
-export const BoxParagrafh = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-`
-
-export const TitleParagrafh = styled.h2`
-    display: flex;
-    color: #0A0D25;
-`
-
-export const Paragrafh = styled.p<TextProps>`
-    text-align: center;
-    font-size: ${props => props.size ? props.size : 16}px;
-    margin: 20px 0;
-    color: ${props => props.color ? props.color : '#4E7D96'};
 `
 
 export const BoxInformation = styled.div`
@@ -103,6 +60,38 @@ export const ParagrafhBold = styled.p<TextProps>`
     font-weight: bold;
     margin: 5px 10px;
     color: ${props => props.color ? props.color : '#4E7D96'};
+`
+
+export const BoxParagrafh = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+`
+
+export const ContentButtonCards = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
+export const TitleParagrafh = styled.h2`
+    display: flex;
+    color: #0A0D25;
+`
+
+export const Paragrafh = styled.p<TextProps>`
+    text-align: center;
+    font-size: ${props => props.size ? props.size : 16}px;
+    margin: 20px 0;
+    color: ${props => props.color ? props.color : '#4E7D96'};
+`
+
+export const ContentBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 100px;
+    width: 100%;
 `
 
 export const BoxImg = styled.div`

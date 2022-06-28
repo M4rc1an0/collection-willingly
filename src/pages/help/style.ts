@@ -8,7 +8,6 @@ interface TextTitleProps {
 export const Container = styled.div`
     width: 100%;
     height: 100vh;
-    background-color: #E3EDF2;
 `
 
 export const ContentSpace = styled.div`
@@ -22,7 +21,7 @@ export const ContentSpace = styled.div`
 export const ImgBanner = styled.img`
     width: 100%;
     position: relative;
-    -webkit-mask-image: linear-gradient(to top, transparent, black 60%);
+    mask-image: linear-gradient(to top, transparent, black 40%);
 `
 
 export const ImgBox = styled.div`
