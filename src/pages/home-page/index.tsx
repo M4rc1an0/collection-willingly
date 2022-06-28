@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import * as S from "./style";
 import { Header, InformationBox, Title, SubTitle, Input, Button, Footer, CardButton, Carrousel } from "../../components";
-import { ArrowRight, Heart, Notebook, Person, SendDonate, Shield, Snack } from "../../assets/icons";
+import { Heart, Notebook, Person, SendDonate, Shield, Snack } from "../../assets/icons";
+import Topic from "../../assets/icons/Topic";
 
 export default function homePage() {
     const [data, setData] = useState()
@@ -127,7 +128,7 @@ export default function homePage() {
                                     {liList.map((institution, key) => {
                                         const { text } = institution
                                         return (
-                                            <S.Li><ArrowRight width={20} stroke='#FF844B' /><S.ParagrafhBold key={text}>{text}</S.ParagrafhBold></S.Li>
+                                            <S.Li><Topic stroke='#FF844B' /><S.ParagrafhBold key={text}>{text}</S.ParagrafhBold></S.Li>
                                         )
                                     })}
                                 </S.Ul>
@@ -139,7 +140,7 @@ export default function homePage() {
                     <S.ContentDonate>
                         <SubTitle text='Faça uma doação!' size={32} />
                         <S.SendDonate href='/donation'>
-                            <SendDonate width={200} strokePrimary='#FF844B' strokeSecondary='#fff' />
+                            {/* <SendDonate width={200} strokePrimary='#FF844B' strokeSecondary='#fff' /> */}
                         </S.SendDonate>
                     </S.ContentDonate>
                 </S.ContentInfoBox>

@@ -19,6 +19,33 @@ export const ContentSpace = styled.div`
     justify-content: space-between;
 `
 
+export const ImgBanner = styled.img`
+    width: 100%;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to top, transparent, black 60%);
+`
+
+export const ImgBox = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const ContentImg = styled.div`
+    display: flex;
+    width: 100%;
+    padding-bottom: 20px;
+    background-color: rgb(0,0,0,0.7);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+`
+
 export const ContentPage = styled.div`
     padding: 0 20px;
 `
@@ -34,13 +61,14 @@ export const ContentBox = styled.div`
 `
 
 export const Centralize = styled.div`
-    margin: 0 200px;
+    margin: 0 100px;
 `
 
 export const AlignContent = styled.div`
     display: flex;
     justify-content: space-around;
     width: 100%;
+    margin: 50px 0;
 `
 
 export const FormSend = styled.div`
@@ -65,7 +93,7 @@ export const TitleParagrafh = styled.h2`
     color: #0A0D25;
 `
 
-export const Paragrafh = styled.div<TextTitleProps>`
+export const Paragraph = styled.div<TextTitleProps>`
     font-size: 16px;
     margin: 5px 0;
     padding: 5px;

@@ -1,10 +1,41 @@
 import { useEffect, useState } from "react";
 import { Bank, Clothes, Message, Money, Others, Phone, QrCode, Resources } from "../../assets/icons";
+import { Here } from "../../assets/icons/Here";
 import { Footer, Header, Title, SubTitle, Button, InformationBox, Card } from "../../components";
 import * as S from "./style";
 
 export default function donation() {
     const [render, setRender] = useState<any>('')
+    const [buttonClothes, setButtonClothes] = useState(false)
+    const [buttonFood, setButtonFood] = useState(false)
+    const [buttonMaterials, setButtonMaterials] = useState(false)
+    const [buttonMoney, setButtonMoney] = useState(false)
+
+    useEffect(() => {
+        if (buttonClothes === true) {
+            setButtonFood(false)
+            setButtonMaterials(false)
+            setButtonMoney(false)
+        } else if (buttonFood === true) {
+            setButtonClothes(false)
+            setButtonMaterials(false)
+            setButtonMoney(false)
+        } else if (buttonMaterials === true) {
+            setButtonClothes(false)
+            setButtonFood(false)
+            setButtonMoney(false)
+        } else if (buttonMoney === true) {
+            setButtonClothes(false)
+            setButtonFood(false)
+            setButtonMaterials(false)
+        }
+    }, [buttonClothes, buttonFood, buttonMaterials, buttonMoney])
+
+    console.log(buttonClothes, 'buttonClothes')
+    console.log(buttonFood, 'buttonFood')
+    console.log(buttonMaterials, 'buttonMaterials')
+    console.log(buttonMoney, 'buttonMoney')
+
 
     const setValueStorage = (value: string) => {
         localStorage.setItem('donation', value)
@@ -19,13 +50,20 @@ export default function donation() {
         <S.ContainerHome>
             <S.ContentTop>
                 <Header />
+                <S.ImgBox>
+                    <S.ImgBanner src="./imagemCrianças.jpg" />
+                    <S.ContentImg>
+                        <Title text='Faça uma doação' color='#fff' />
+                        <Here width={60} stroke='#FF844B' />
+                    </S.ContentImg>
+                </S.ImgBox>
                 <S.ContentBox>
-                    <SubTitle text='Formas de Doação:' />
                     <S.ContentFlex>
-                        <Button action={() => setValueStorage('clothes')} text='Roupas e Cobertores' textColor="#4E7D96" icon={<Clothes width={48} stroke="#FF844B" />} />
-                        <Button action={() => setValueStorage('food')} text='Alimentos e Remedios' textColor="#4E7D96" icon={<Resources width={48} stroke="#FF844B" />} />
-                        <Button action={() => setValueStorage('materials')} text='Material Didático e Outros' textColor="#4E7D96" icon={<Others width={48} stroke="#FF844B" />} />
-                        <Button action={() => setValueStorage('money')} text='Transferências ou Dinheiro' textColor="#4E7D96" icon={<Money width={48} stroke="#FF844B" />} />
+                        <Button active={buttonClothes} 
+                            action={() => {setValueStorage('clothes'), setButtonClothes(true)}} text='Roupas e Cobertores' icon={<Clothes width={48} stroke="#FF844B" />} />
+                        <Button active={buttonFood} action={() => {setValueStorage('food'), setButtonFood(true)}} text='Alimentos e Remedios' icon={<Resources width={48} stroke="#FF844B" />} />
+                        <Button active={buttonMaterials} action={() => {setValueStorage('materials'), setButtonMaterials(true)}} text='Material Didático e Outros' icon={<Others width={48} stroke="#FF844B" />} />
+                        <Button active={buttonMoney} action={() => {setValueStorage('money'), setButtonMoney(true)}} text='Transferências ou Dinheiro' icon={<Money width={48} stroke="#FF844B" />} />
                     </S.ContentFlex>
                     {!render &&
                         <S.ContentMethods>

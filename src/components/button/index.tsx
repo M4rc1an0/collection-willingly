@@ -1,12 +1,12 @@
 import * as S from './style'
 
-const Button = ({ text, action, icon, textColor }: any) => {
+const Button = ({ text, action, icon, active }: any) => {
     return (
-        <S.Button onClick={action}>
-            <S.iconContent >
+        <S.Button active={active} onClick={action}>
+            <S.iconContent active={active}>
                 {icon && icon}
             </S.iconContent>
-            <S.Paragrafh color={textColor}>
+            <S.Paragrafh active={active}>
                 {text}
             </S.Paragrafh>
         </S.Button>

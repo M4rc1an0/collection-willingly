@@ -22,6 +22,33 @@ export const ContentTop = styled.div`
     width: 100%;
 `
 
+export const ImgBox = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const ImgBanner = styled.img`
+    width: 100%;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to top, transparent, black 100%);
+`
+
+export const ContentImg = styled.div`
+    display: flex;
+    width: 100%;
+    padding-bottom: 20px;
+    background-color: rgb(0,0,0,0.7);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+`
+
 export const Content = styled.div`
     display: flex;
     padding: 20px;

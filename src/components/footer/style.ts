@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+interface TextProps {
+    size?: number;
+    color?: string;
+}
+
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -37,18 +42,17 @@ export const ContainerSocial = styled.div`
 `
 
 export const ContainerAddress = styled.div`
-    width: 100%;
+    width: 50%;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
     margin: 20px 20px;
 `
 
-export const Paragraph = styled.p`
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    color: #fff;
+export const Paragraph = styled.p<TextProps>`
+    text-align: center;
+    font-size: ${props => props.size ? props.size : 16}px;
+    color: ${props => props.color ? props.color : '#fff'};
 `
 
 export const RightsReserved = styled.div`
@@ -61,7 +65,7 @@ export const RightsReserved = styled.div`
 
 export const Line = styled.div`
     width: 1.5px;
-    height: 100px;
+    height: 120px;
     margin: 10px 0;
     background-color: #E3EDF2;
 `

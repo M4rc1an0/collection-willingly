@@ -1,11 +1,11 @@
 import styled from "styled-components";
-
-interface TextProps {
+interface ActiveProps {
+    active?: boolean
     color?: string;
     size?: number
 }
 
-export const Button = styled.button`
+export const Button = styled.button<ActiveProps>`
     display: flex;
     width: 200px;
     flex-direction: column;
@@ -14,24 +14,39 @@ export const Button = styled.button`
     padding: 5px 10px;
     margin: 10px;
     border: none;
-    background-color: #fff;
+    background-color: ${props => props.active ? '#FF844B' : '#fff'};
     font-weight: bold;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;
     cursor: pointer;
 
     :hover {
-        background-color: #f2f2f2;
+        background-color: #FF844B;
+
+        p{
+            color: #fff;    
+        }
+
+        svg{
+            path{
+                stroke: #fff;
+            }
+        }
     }
 
 `
 
-export const iconContent = styled.div`
+export const iconContent = styled.div<ActiveProps>`
+    svg{
+        path{
+            stroke: ${props => props.active ? '#fff' : '#FF844B'};
+        }
+    }
 
 `
 
-export const Paragrafh = styled.div<TextProps>`
+export const Paragrafh = styled.p<ActiveProps>`
     font-size: ${props => props.size ? props.size : 16}px;
     margin: 5px 10px;
-    color: ${props => props.color ? props.color : '#4E7D96'};    
+    color: ${props => props.active ? '#fff' : '#FF844B'};
 `

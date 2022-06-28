@@ -16,6 +16,18 @@ const Footer = () => {
                     <SocialIcon icon='wpp' />
                 </S.ContainerSocial>
                 <S.Line />
+                <S.RightsReserved>
+                    <S.Paragraph size={12}>
+                        Todos os direitos reservados
+                    </S.Paragraph>
+                    <S.IconBox>
+                        <Copyright width={16} stroke='#fff' />
+                    </S.IconBox>
+                    <S.Paragraph size={12}>
+                        2022 | Desenvolvido por Rogério Marciano
+                    </S.Paragraph>
+                </S.RightsReserved>
+                <S.Line />
                 <S.ContainerAddress>
                     <S.Paragraph>
                         E-mail: collection_willingly@hotmail.com
@@ -34,17 +46,6 @@ const Footer = () => {
                     </S.Paragraph>
                 </S.ContainerAddress>
             </S.ContainerContent>
-            <S.RightsReserved>
-                <S.Paragraph>
-                    Todos os direitos reservados
-                </S.Paragraph>
-                <S.IconBox>
-                    <Copyright width={16} stroke='#fff' />
-                </S.IconBox>
-                <S.Paragraph>
-                    2022 | Desenvolvido por Rogério Marciano
-                </S.Paragraph>
-            </S.RightsReserved>
         </S.Container>
     )
 }

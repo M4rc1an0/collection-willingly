@@ -35,11 +35,11 @@ export const ImgCarrousel = styled.div`
 export const ImgBanner = styled.img`
     width: 100%;
     position: relative;
+    -webkit-mask-image: linear-gradient(to top, transparent, black 100%);
 `
 
 export const ContentImg = styled.div`
     display: flex;
-    /* width: 100%; */
     background-color: rgb(0,0,0,0.7);
     flex-direction: column;
     justify-content: center;
