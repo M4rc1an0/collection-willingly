@@ -20,6 +20,15 @@ export const Button = styled.button<ActiveProps>`
     border-radius: 5px;
     cursor: pointer;
 
+    :disabled{
+        cursor: default;
+        background-color: #ccc;
+        
+        p{
+            color: #fff;    
+        }
+    }
+
     :hover {
         background-color: #FF844B;
 
@@ -32,11 +41,20 @@ export const Button = styled.button<ActiveProps>`
                 stroke: #fff;
             }
         }
+
+        :disabled{
+            background-color: #ccc;
+            
+            p{
+                color: #fff;    
+            }
+    }
     }
 
 `
 
 export const iconContent = styled.div<ActiveProps>`
+
     svg{
         path{
             stroke: ${props => props.active ? '#fff' : '#FF844B'};

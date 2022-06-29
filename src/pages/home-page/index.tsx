@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import * as S from "./style";
-import { Header, InformationBox, Title, SubTitle, Input, Button, Footer, CardButton, Carrousel } from "../../components";
+import { Header, InformationBox, Title, SubTitle, Input, Button, Footer, CardButton, Carrousel, Card } from "../../components";
 import { Heart, Notebook, Person, SendDonate, Shield, Snack } from "../../assets/icons";
 import Topic from "../../assets/icons/Topic";
 
 export default function homePage() {
     const [data, setData] = useState<any>()
-    const [isOpen, setIsOpen] = useState<boolean>()
+    const [isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
         axios.get('https://collection-willingly-7a1b4-default-rtdb.firebaseio.com/collection_willingly/pages/home_page.json')
@@ -15,26 +15,6 @@ export default function homePage() {
                 setData(response.data)
             })
     }, [])
-
-    console.log(data, 'data api')
-
-    const liList = [
-        {
-            text: "Ongs",
-        },
-        {
-            text: "Instituições beneficientes",
-        },
-        {
-            text: "Associações beneficientes",
-        },
-        {
-            text: "Projetos sociais",
-        },
-        {
-            text: "Etc...",
-        }
-    ]
 
     return (
         <>
@@ -61,9 +41,9 @@ export default function homePage() {
                         </S.ContentImg>
                     </S.ImgCarrousel>
                     <S.ContentBox>
-                        <SubTitle text='VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA' />
+                        <SubTitle text='VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA'    />
                         <S.ContentButtonCards>
-                            <CardButton width='250px' action={() => { window.location.href = '/home-page?saude', setIsOpen(true) }}>
+                            <Card width='250px'>
                                 <S.ContentInfoBox>
                                     <S.ParagrafhBold>Saúde</S.ParagrafhBold>
                                     <Heart width={75} stroke="#f84949" />
@@ -75,8 +55,8 @@ export default function homePage() {
                                         crianças no mundo todo.
                                     </S.Paragrafh>
                                 </S.ContentInfoBox>
-                            </CardButton>
-                            <CardButton width='250px'>
+                            </Card>
+                            <Card width='250px'>
                                 <S.ContentInfoBox>
                                     <S.ParagrafhBold>Educação</S.ParagrafhBold>
                                     <Notebook width={75} />
@@ -88,8 +68,8 @@ export default function homePage() {
                                         acesso à educação.
                                     </S.Paragrafh>
                                 </S.ContentInfoBox>
-                            </CardButton>
-                            <CardButton width='250px'>
+                            </Card>
+                            <Card width='250px'>
                                 <S.ContentInfoBox>
                                     <S.ParagrafhBold>Proteção</S.ParagrafhBold>
                                     <Shield width={75} stroke="#484dda" />
@@ -101,8 +81,8 @@ export default function homePage() {
                                         de crianças e adolescentes.
                                     </S.Paragrafh>
                                 </S.ContentInfoBox>
-                            </CardButton>
-                            <CardButton width='250px'>
+                            </Card>
+                            <Card width='250px'>
                                 <S.ContentInfoBox>
                                     <S.ParagrafhBold>Refeição</S.ParagrafhBold>
                                     <Snack width={75} stroke="#2cb349" />
@@ -114,7 +94,7 @@ export default function homePage() {
                                         a refeição no dia-a-dia.
                                     </S.Paragrafh>
                                 </S.ContentInfoBox>
-                            </CardButton>
+                            </Card>
                         </S.ContentButtonCards>
                     </S.ContentBox>
                     <S.ContentInfoBox>
@@ -130,7 +110,6 @@ export default function homePage() {
                                 <S.ContentUl>
                                     <S.Ul>
                                         {data && Object.entries(data?.benefit_list).map((benefit: any) => {
-                                            console.log(benefit[0], 'beneficions')
                                             return (
                                                 <S.Li>
                                                     <Topic stroke='#FF844B' />
@@ -149,21 +128,13 @@ export default function homePage() {
                         <S.ContentDonate>
                             <SubTitle text='Faça uma doação!' size={32} />
                             <S.SendDonate href='/donation'>
-                                {/* <SendDonate width={200} strokePrimary='#FF844B' strokeSecondary='#fff' /> */}
+                                
                             </S.SendDonate>
                         </S.ContentDonate>
                     </S.ContentInfoBox>
                 </S.ContentTop>
                 <Footer />
             </S.ContainerHome>
-            {
-                isOpen &&
-                <S.OpacityModal>
-                    <S.Modal>
-
-                    </S.Modal>
-                </S.OpacityModal>
-            }
         </>
     )
 }

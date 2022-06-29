@@ -1,10 +1,10 @@
 import * as S from "./style";
 
-const Input = ({value, change, name}: any) => {
+const Input = ({value, change}: any) => {
 
     return(
         <S.InputGroup>
-            <S.InputText name={name} onChange={change} value={value}/>
+            <S.InputText onChange={change} value={value}/>
         </S.InputGroup>
     )
 }
