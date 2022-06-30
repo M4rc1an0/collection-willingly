@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface TextTitleProps {
+interface TextProps {
     size?: number;
     color?: string;
 }
@@ -92,12 +92,19 @@ export const TitleParagrafh = styled.h2`
     color: #0A0D25;
 `
 
-export const Paragraph = styled.div<TextTitleProps>`
+export const Paragraph = styled.div<TextProps>`
     font-size: 16px;
     margin: 5px 0;
     padding: 5px;
     word-break: break-all;
     color: ${props => props.color ? props.color : '#4E7D96'};    
+`
+
+export const ParagrafhBold = styled.p<TextProps>`
+    font-size: ${props => props.size ? props.size : 16}px;
+    font-weight: bold;
+    margin: 5px 10px;
+    color: ${props => props.color ? props.color : '#4E7D96'};
 `
 
 export const Img = styled.img`

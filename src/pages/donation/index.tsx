@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { Bank, Clothes, Message, Money, Others, Phone, QrCode, Resources } from "../../assets/icons";
-import { Here } from "../../assets/icons/Here";
-import { Footer, Header, Title, SubTitle, Button, InformationBox, Card } from "../../components";
+import { Bank, Clothes, Restaurant, Money, Notebook, Others, QrCode, Resources, Here } from "../../assets/icons";
+import { Footer, Header, Title, SubTitle, Button, Card } from "../../components";
 import QRCode from "react-qr-code";
 import * as S from "./style";
 
@@ -59,12 +58,12 @@ export default function donation() {
                     <S.ContentImg>
                         <Title text='Faça uma doação' color='#fff' />
                         <Here width={60} stroke='#FF844B' />
+                        <S.ParagrafhBold color="#FF844B">DOE CARINHO. DOE AMOR. DOE ESPERANÇA.</S.ParagrafhBold>
                     </S.ContentImg>
                 </S.ImgBox>
                 <S.ContentBox>
                     <S.ContentFlex>
-                        <Button active={buttonClothes}
-                            action={() => { setValueStorage('clothes'), setButtonClothes(true) }} text='Roupas e Cobertores' icon={<Clothes width={48} stroke="#FF844B" />} />
+                        <Button active={buttonClothes} action={() => { setValueStorage('clothes'), setButtonClothes(true) }} text='Roupas e Cobertores' icon={<Clothes width={48} stroke="#FF844B" />} />
                         <Button active={buttonFood} action={() => { setValueStorage('food'), setButtonFood(true) }} text='Alimentos e Remedios' icon={<Resources width={48} stroke="#FF844B" />} />
                         <Button active={buttonMaterials} action={() => { setValueStorage('materials'), setButtonMaterials(true) }} text='Material Didático e Outros' icon={<Others width={48} stroke="#FF844B" />} />
                         <Button active={buttonMoney} action={() => { setValueStorage('money'), setButtonMoney(true) }} text='Transferências ou Dinheiro' icon={<Money width={48} stroke="#FF844B" />} />
@@ -100,55 +99,47 @@ export default function donation() {
                         <>
                             <S.chooseOption>Alimentos e Remédios</S.chooseOption>
                             <S.ContentSpace>
-                                <S.Paragrafh>Para doação de alimentos e remédios, entre em contato com a instituição de arrecadação alimenticia:</S.Paragrafh>
-                                <S.CenterItens>
-                                    <Phone width={75} stroke='#4287f5' />
-                                    <SubTitle text='11 4823-6752' />
-                                </S.CenterItens>
-                                <S.Paragrafh>ou contate-nos pelo whats app:</S.Paragrafh>
-                                <S.ButtonWpp>
-                                    <Message width={75} stroke='#00c925' />
-                                    <S.Paragrafh>Mande uma mensagem</S.Paragrafh>
-                                </S.ButtonWpp>
-                                <S.Paragrafh>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</S.Paragrafh>
+                                <S.Paragrafh>Para doação de alimentos e remédios, entre em contato com algumas das instituições especializadas para cada caso:</S.Paragrafh>
+                                <S.ContentFlex>
+                                    <Card width='350px'>
+                                        <S.CenterItens>
+                                            <SubTitle text='Alimentos' />
+                                            <S.ButtonLink onClick={() => window.location.href = "https://naacao.com.br/doacoes-para-projetos-sociais/?gclid=Cj0KCQjw8O-VBhCpARIsACMvVLPW7v3pEnOYp5WtGZxtV3eUV_s1qktjcjAwJbJ_-0Cs5PV1db56g1gaAj8JEALw_wcB"}>
+                                                <Restaurant width={75} stroke="#00aaaa" />
+                                                <S.ParagrafhBold color="#e97922">ONG NAAÇÃO</S.ParagrafhBold>
+                                            </S.ButtonLink>
+                                        </S.CenterItens>
+                                    </Card>
+                                    <Card width='350px'>
+                                        <S.CenterItens>
+                                            <SubTitle text='Remédios' />
+                                            <S.ButtonLink onClick={() => window.location.href = "https://cihesel.ong.br/campanha-dos-remedios/"}>
+                                                <Resources width={75} stroke="#c6da17" />
+                                                <S.ParagrafhBold color="#00aaaa">CIHESEL</S.ParagrafhBold>
+                                            </S.ButtonLink>
+                                        </S.CenterItens>
+                                    </Card>
+                                </S.ContentFlex>
                             </S.ContentSpace>
                         </>
                     }
                     {render === 'materials' &&
                         <>
                             <S.chooseOption>Material Didático e outros</S.chooseOption>
-                            <S.ContentFlex>
-                                <Card width='350px'>
-                                    <S.ContentSpace>
-                                        <S.Paragrafh color='#FF844B'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                            veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                                            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                                            magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                                            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                                            numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-                                            nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
-                                            voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-                                        </S.Paragrafh>
-                                    </S.ContentSpace>
-                                </Card>
-                                <Card width='350px'>
-                                    <S.ContentSpace>
-                                        <S.Paragrafh color='#FF844B'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                            veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                                            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                                            magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                                            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                                            numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-                                            nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
-                                            voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-                                        </S.Paragrafh>
-                                    </S.ContentSpace>
-                                </Card>
-                            </S.ContentFlex>
+                            <S.ContentSpace>
+                                <S.Paragrafh>Para doação de materiais didático e outros:</S.Paragrafh>
+                                <S.ContentFlex>
+                                    <Card width='350px'>
+                                    <S.CenterItens>
+                                            <SubTitle text='Materiais didático e outros' />
+                                            <S.ButtonLink onClick={() => window.location.href = "https://www.larcasabela.org.br/doacoes"}>
+                                                <Notebook width={75} stroke="#54bf54" fill="#0D6035" />
+                                                <S.ParagrafhBold color="#0D6035">LAR CASA BELA</S.ParagrafhBold>
+                                            </S.ButtonLink>
+                                        </S.CenterItens>
+                                    </Card>
+                                </S.ContentFlex>
+                            </S.ContentSpace>
                         </>
                     }
                     {render === 'money' &&
@@ -157,15 +148,15 @@ export default function donation() {
                             <S.ContentFlex>
                                 <Card width='250px'>
                                     <S.ContentSpace>
-                                        <Bank width={100} stroke='#FF844B' />
+                                        <Bank width={100} stroke="#FF844B" />
                                         <SubTitle text='Conta Bancária' />
-                                        <S.ParagrafhBold color='#000'>Conta Corrente - 76793-9</S.ParagrafhBold>
-                                        <S.ParagrafhBold color='#000'>Agência - 5306</S.ParagrafhBold>
-                                        <S.ParagrafhBold color='#000'>Banco - Itaú</S.ParagrafhBold>
+                                        <S.ParagrafhBold color="#000">Conta Corrente - 76793-9</S.ParagrafhBold>
+                                        <S.ParagrafhBold color="#000">Agência - 5306</S.ParagrafhBold>
+                                        <S.ParagrafhBold color="#000">Banco - Itaú</S.ParagrafhBold>
                                         <S.Paragrafh>ou</S.Paragrafh>
-                                        <S.ParagrafhBold color='#000'>Conta Corrente - 97357-3</S.ParagrafhBold>
-                                        <S.ParagrafhBold color='#000'>Agência - 9647</S.ParagrafhBold>
-                                        <S.ParagrafhBold color='#000'>Banco - Bradesco</S.ParagrafhBold>
+                                        <S.ParagrafhBold color="#000">Conta Corrente - 97357-3</S.ParagrafhBold>
+                                        <S.ParagrafhBold color="#000">Agência - 9647</S.ParagrafhBold>
+                                        <S.ParagrafhBold color="#000">Banco - Bradesco</S.ParagrafhBold>
 
                                     </S.ContentSpace>
                                 </Card>
@@ -176,7 +167,7 @@ export default function donation() {
                                         <S.ParagrafhBold color='#000'>Cpf - 479.972.528.94</S.ParagrafhBold>
                                         <S.Paragrafh>ou</S.Paragrafh>
                                         <S.ContentQrCode>
-                                            <QRCode value="47997252894" size={150} fgColor='#FF844B' />
+                                            <QRCode value="https://mpago.la/2YkmT2R" size={150} fgColor='#FF844B' />
                                         </S.ContentQrCode>
                                     </S.ContentSpace>
                                 </Card>

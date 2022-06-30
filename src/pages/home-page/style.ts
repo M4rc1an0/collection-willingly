@@ -145,13 +145,17 @@ export const Li = styled.li`
 `
 
 export const ContentDonate = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 20px 0;
 `
 
 export const SendDonate = styled.a`
+    width: 100%;
+    text-decoration: none;
     cursor: pointer;
 
     :hover {
@@ -165,4 +169,17 @@ export const SendDonate = styled.a`
             }
         }
     }
+`
+
+export const ContainerSendDonate = styled.div`
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0,0,0,0.7);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 `

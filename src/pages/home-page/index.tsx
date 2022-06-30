@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import * as S from "./style";
 import { Header, InformationBox, Title, SubTitle, Input, Button, Footer, CardButton, Carrousel, Card } from "../../components";
-import { Heart, Notebook, Person, SendDonate, Shield, Snack } from "../../assets/icons";
-import Topic from "../../assets/icons/Topic";
+import { Heart, HeartDonation, Notebook, Person, Topic, Shield, Snack } from "../../assets/icons";
 
 export default function homePage() {
     const [data, setData] = useState<any>()
@@ -41,7 +40,7 @@ export default function homePage() {
                         </S.ContentImg>
                     </S.ImgCarrousel>
                     <S.ContentBox>
-                        <SubTitle text='VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA'    />
+                        <SubTitle text='VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA' />
                         <S.ContentButtonCards>
                             <Card width='250px'>
                                 <S.ContentInfoBox>
@@ -127,9 +126,14 @@ export default function homePage() {
                     <S.ContentInfoBox>
                         <S.ContentDonate>
                             <SubTitle text='Faça uma doação!' size={32} />
-                            <S.SendDonate href='/donation'>
-                                
-                            </S.SendDonate>
+                            <S.ParagrafhBold color="#FF844B">
+                                Faça parte desta rede de solidariedade de humanização<br />
+                            </S.ParagrafhBold>
+                            <S.ParagrafhBold color="#FF844B">
+                                na saúde e fortaleça inúmeras pessoas e famílias.
+                            </S.ParagrafhBold>
+                            <HeartDonation width={200} stroke="#f84949"/>
+                            <Button text="Doar" />
                         </S.ContentDonate>
                     </S.ContentInfoBox>
                 </S.ContentTop>

@@ -148,7 +148,7 @@ export const CenterItens = styled.div`
     align-items: center;
 `
 
-export const ButtonWpp = styled.button`
+export const ButtonLink = styled.button`
     margin: 20px;
     padding: 20px;
     border-radius: 5px;
@@ -157,14 +157,15 @@ export const ButtonWpp = styled.button`
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     :hover {
-        background-color: #00c925;
+        background-color: #FF844B;
         p {
             color: #fff;
         }
 
         svg {
             path {
-                fill: #fff
+                stroke: #fff;
+                fill: #FF844B
             }
         }
     }

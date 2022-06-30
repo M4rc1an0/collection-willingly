@@ -11,9 +11,9 @@ const Footer = () => {
                 </S.LogoFooter>
                 <S.Line />
                 <S.ContainerSocial>
-                    <SocialIcon icon='facebook' />
-                    <SocialIcon icon='instagram' />
-                    <SocialIcon icon='wpp' />
+                    <SocialIcon icon='facebook' href="https://www.facebook.com/groups/361080610742106"/>
+                    <SocialIcon icon='instagram' href="https://www.instagram.com/lardemaria.iblm/" />
+                    <SocialIcon icon='wpp' href="https://wa.me/5511998189322" />
                 </S.ContainerSocial>
                 <S.Line />
                 <S.RightsReserved>

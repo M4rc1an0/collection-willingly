@@ -1,6 +1,5 @@
 import { useState } from "react";
-import EmailSend from "../../assets/icons/EmailSend";
-import { Here } from "../../assets/icons/Here";
+import { EmailSend, Here } from "../../assets/icons";
 import { Button, Footer, Header, Input, SubTitle, TextArea, Title } from "../../components";
 import * as S from "./style";
 
@@ -11,10 +10,6 @@ export default function help() {
     const [description, setDescription] = useState('')
     const [isOpen, setIsOpen] = useState(false)
     const [validation, setValidation] = useState(true)
-
-    if (email.length) {
-        setValidation(false)
-    }
 
     const sendForm = () => {
         setIsOpen(true)
@@ -78,14 +73,14 @@ export default function help() {
                                     </S.Paragraph>
                                     <Input value={name} change={(e: any) => setName(e.target.value)} />
                                     <S.Paragraph>
-                                        E-mail*:
+                                        E-mail:
                                     </S.Paragraph>
                                     <Input value={email} change={(e: any) => setEmail(e.target.value)} />
                                     <S.Paragraph>
-                                        Dúvida ou sugestão*:
+                                        Dúvida ou sugestão:
                                     </S.Paragraph>
                                     <TextArea value={description} change={(e: any) => setDescription(e.target.value)} />
-                                    <Button disabled={validation} text='Enviar' action={() => { sendForm() }} />
+                                    <Button text='Enviar' action={() => { sendForm() }} />
                                 </S.FormSend>
                             </S.AlignContent>
                         </S.Centralize>
@@ -101,8 +96,10 @@ export default function help() {
                         <SubTitle text='Agradecemos o contato!' />
                         <S.Paragraph>
                             Em breve entraremos em contato através do seu email<br/>
-                            {name && <>Sr/a. </>}{name}
                         </S.Paragraph>
+                        <S.ParagrafhBold>
+                            {name && <>Sr/a. </>}{name}
+                        </S.ParagrafhBold>
                     </S.Modal>
                 </S.OpacityModal>
             }

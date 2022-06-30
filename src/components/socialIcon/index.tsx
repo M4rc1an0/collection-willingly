@@ -1,7 +1,7 @@
 import { Facebook, Instagram, WhatsApp, World } from '../../assets/icons'
 import * as S from './style'
 
-const SocialIcon = ({ icon }: any) => {
+const SocialIcon = ({ icon, href }: any) => {
 
     const iconSelected = () => {
         if (icon === 'facebook') {
@@ -17,7 +17,7 @@ const SocialIcon = ({ icon }: any) => {
 
     return (
         <S.Container>
-            <S.Icon>
+            <S.Icon href={href}>
                 {iconSelected()}
             </S.Icon>
         </S.Container>
