@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 import * as S from "./style";
 
-interface CardProps {
+interface CardBoxButtonProps {
     children: ReactNode
     width: string
 }
 
-const Card = ({ children, width }: CardProps) => {
+const CardBoxButton = ({children, width}: CardBoxButtonProps) => {
     return (
         <S.Section width={width}>
             <S.BoxParagrafh>
@@ -16,4 +16,4 @@ const Card = ({ children, width }: CardProps) => {
     )
 }
 
-export default Card
+export default CardBoxButton

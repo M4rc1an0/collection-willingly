@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface PropsSection {
-    width?: number
+    width?: string
     background?: string
 }
 

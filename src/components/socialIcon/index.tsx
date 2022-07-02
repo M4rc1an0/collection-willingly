@@ -1,7 +1,12 @@
 import { Facebook, Instagram, WhatsApp, World } from '../../assets/icons'
 import * as S from './style'
 
-const SocialIcon = ({ icon, href }: any) => {
+interface SocialIcon {
+    icon: string
+    href: string
+}
+
+const SocialIcon = ({ icon, href }: SocialIcon) => {
 
     const iconSelected = () => {
         if (icon === 'facebook') {

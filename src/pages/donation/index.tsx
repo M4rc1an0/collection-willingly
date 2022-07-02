@@ -19,18 +19,15 @@ export default function donation() {
     const [others, setOthers] = useState()
     
     useEffect(() => {
-        axios.get('https://collection-willingly-7a1b4-default-rtdb.firebaseio.com/collection_willingly/contagem.json')
+        axios.get('https://collection-willingly-7a1b4-default-rtdb.firebaseio.com/collection_willingly.json')
             .then(function (response) {
                 setData(response.data)
             })
-            setFood(data[0]?.clicks)
     }, [])
 
-    console.log(food, 'resultados')
-
-    const click = (id: string) => {
-        axios.patch(`https://collection-willingly-7a1b4-default-rtdb.firebaseio.com/collection_willingly/contagem/${id}.json`,{
-            clicks: '1'
+    const click = () => {
+        axios.patch(`https://collection-willingly-7a1b4-default-rtdb.firebaseio.com/collection_willingly.json`,{
+            score: data.score + 1
         })
     }
 
@@ -139,7 +136,7 @@ export default function donation() {
                                             <SubTitle text='Alimentos' />
                                             <S.ButtonLink onClick={() => {
                                                 window.location.href = "https://naacao.com.br/doacoes-para-projetos-sociais/?gclid=Cj0KCQjw8O-VBhCpARIsACMvVLPW7v3pEnOYp5WtGZxtV3eUV_s1qktjcjAwJbJ_-0Cs5PV1db56g1gaAj8JEALw_wcB"
-                                                click('-N5xk-ZNOBU06GotH769')
+                                                click()
                                             }}>
                                                 <Restaurant width={75} stroke="#00aaaa" />
                                                 <S.ParagrafhBold color="#e97922">ONG NAAÇÃO</S.ParagrafhBold>
@@ -149,7 +146,10 @@ export default function donation() {
                                     <Card width='350px'>
                                         <S.CenterItens>
                                             <SubTitle text='Remédios' />
-                                            <S.ButtonLink onClick={() => window.location.href = "https://cihesel.ong.br/campanha-dos-remedios/"}>
+                                            <S.ButtonLink onClick={() => {
+                                                window.location.href = "https://cihesel.ong.br/campanha-dos-remedios/"
+                                                click()
+                                                }}>
                                                 <Resources width={75} stroke="#c6da17" />
                                                 <S.ParagrafhBold color="#00aaaa">CIHESEL</S.ParagrafhBold>
                                             </S.ButtonLink>
@@ -168,7 +168,10 @@ export default function donation() {
                                     <Card width='350px'>
                                     <S.CenterItens>
                                             <SubTitle text='Materiais didático e outros' />
-                                            <S.ButtonLink onClick={() => window.location.href = "https://www.larcasabela.org.br/doacoes"}>
+                                            <S.ButtonLink onClick={() => {
+                                                window.location.href = "https://www.larcasabela.org.br/doacoes"
+                                                click()
+                                                }}>
                                                 <Notebook width={75} stroke="#54bf54" fill="#0D6035" />
                                                 <S.ParagrafhBold color="#0D6035">LAR CASA BELA</S.ParagrafhBold>
                                             </S.ButtonLink>

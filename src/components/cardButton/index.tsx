@@ -1,6 +1,13 @@
+import { ReactNode } from "react";
 import * as S from "./style";
 
-const CardButton = ({ children, width, action }: any) => {
+interface CardButtonProps {
+    children: ReactNode
+    width: string
+    action: () => void
+}
+
+const CardButton = ({ children, width, action }: CardButtonProps) => {
     return (
         <S.Section width={width} onClick={action}>
             <S.BoxParagrafh>

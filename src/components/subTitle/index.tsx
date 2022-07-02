@@ -1,6 +1,12 @@
 import * as S from './style'
 
-const SubTitle = ({text, size, color}: any) => {
+interface SubTitleProps {
+    text: string
+    size?: number
+    color?: string
+}
+
+const SubTitle = ({text, size, color}: SubTitleProps) => {
     return (
         <S.BoxTitle>
             <S.TextTitle color={color} size={size}>

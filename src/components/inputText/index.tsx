@@ -1,6 +1,11 @@
 import * as S from "./style";
 
-const Input = ({value, change}: any) => {
+interface InputProps {
+    value: string
+    change: (e: any) => void
+}
+
+const Input = ({value, change}: InputProps) => {
 
     return(
         <S.InputGroup>

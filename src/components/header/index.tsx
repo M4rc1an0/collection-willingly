@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react"
 import { World } from "../../assets/icons"
 import * as S from './style'
 
-const Header = ({active}: any) => {
+interface HeaderProps {
+    active: any
+}
+
+const Header = ({active}: HeaderProps) => {
 
     const mockMenu = [
         {

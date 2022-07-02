@@ -1,6 +1,14 @@
 import * as S from './style'
 
-const Button = ({ text, action, icon, active, disabled }: any) => {
+interface ButtonProps {
+    text: string
+    action?: () => void
+    icon?: any
+    active?: boolean
+    disabled?: boolean
+}
+
+const Button = ({ text, action, icon, active, disabled }: ButtonProps) => {
     return (
         <S.Button active={active} onClick={action} disabled={disabled}>
             <S.iconContent active={active}>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import * as S from "./style";
-import { Header, InformationBox, Title, SubTitle, Input, Button, Footer, CardButton, Carrousel, Card } from "../../components";
+import { Header, Title, SubTitle, Input, Button, Footer, CardButton, Carrousel, Card } from "../../components";
 import { Heart, HeartDonation, Notebook, Person, Topic, Shield, Snack } from "../../assets/icons";
 
 export default function homePage() {
@@ -67,7 +67,7 @@ export default function homePage() {
                             {data && Object.entries(data?.buttons).map((content: any) => {
                                 console.log(content[1].icon, 'icones')
                                 return (
-                                    <Card width='250px'>
+                                    <Card width='250px'>    
                                         <S.ContentInfoBox>
                                             <S.ParagrafhBold>{content[1].title}</S.ParagrafhBold>
                                             {selectIcon(content[1].icon)}

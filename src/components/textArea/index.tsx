@@ -1,6 +1,11 @@
 import * as S from "./style";
 
-const TextArea = ({value, change, name}: any) => {
+interface TextAreaProps {
+    value: string
+    change: (e: any) => void
+}
+
+const TextArea = ({value, change}: TextAreaProps) => {
     return(
         <S.AreaGroup>
             <S.TextArea onChange={change} value={value}/>

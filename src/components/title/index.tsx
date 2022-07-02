@@ -1,5 +1,10 @@
 import * as S from './style'
 
+interface TitleProps {
+    text: string
+    size?: number
+    color?: string
+}
 const Title = ({text, size, color}: any) => {
     return (
         <S.BoxTitle>

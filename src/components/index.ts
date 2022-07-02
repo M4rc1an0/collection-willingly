@@ -1,4 +1,3 @@
-import InformationBox from "./informationBox";
 import Header from "./header";
 import Title from "./title";
 import Input from "./inputText";
@@ -12,7 +11,6 @@ import Carrousel from './carrousel'
 import Card from "./card";
 
 export {
-    InformationBox,
     Header,
     Title,
     Input,

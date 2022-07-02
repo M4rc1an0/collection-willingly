@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-interface TextTitleProps {
-    size: number;
-    color: string;
+interface SubTitleProps {
+    size?: number
+    color?: string
 }
 
 export const BoxTitle = styled.div`
@@ -10,7 +10,7 @@ export const BoxTitle = styled.div`
     padding: 5px;
 `
 
-export const TextTitle = styled.h2<TextTitleProps>`
+export const TextTitle = styled.h2<SubTitleProps>`
     font-size: ${props => props.size ? props.size : 24}px;
     color: ${props => props.color ? props.color : '#4E7D96'};
 `
