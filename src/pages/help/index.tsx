@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { EmailSend, Here } from "../../assets/icons";
 import { Button, Footer, Header, Input, SubTitle, TextArea, Title } from "../../components";
 import * as S from "./style";
@@ -9,7 +9,8 @@ export default function help() {
     const [email, setEmail] = useState('')
     const [description, setDescription] = useState('')
     const [isOpen, setIsOpen] = useState(false)
-    const [validation, setValidation] = useState(true)
+    const [isValid, setIsValid] = useState(true)
+    const [validation, setValidation] = useState('')
 
     const sendForm = () => {
         setIsOpen(true)
@@ -25,11 +26,29 @@ export default function help() {
         }, 3000)
     }
 
+    useEffect(() => {
+        if (email && description) {
+            setIsValid(false)
+        } else {
+            setIsValid(true)
+        }
+    }, [email, description])
+
+
+    if (typeof window !== undefined) {
+        useEffect(() => {
+            const url = window.location.href
+            setValidation(url)
+
+        }, [])
+    }
+
+    const block = validation.split('/')[3]
 
     return (
         <>
             <S.Container>
-                <Header />
+                <Header active={block} />
                 <S.ImgBox>
                     <S.ImgBanner src="./abraçoAjuda.jpg" />
                     <S.ContentImg>
@@ -45,24 +64,38 @@ export default function help() {
                                     <S.ContentSection>
                                         <SubTitle text='Preciso me autenticar para fazer uma doação ?' />
                                         <S.Paragraph>
-                                            Não é necessaria a autenticação,
-                                            você pode fazer uma doação anonimamente.
+                                            Não é necessaria a autenticação, você pode tratar diretamente com as instituições
+                                            selecionadas, e fazer uma doação anonima.
                                         </S.Paragraph>
                                     </S.ContentSection>
                                     <S.ContentSection>
                                         <SubTitle text='Quais formas posso ajudar ?' />
                                         <S.Paragraph>
-                                            Você pode ajudar através da doação de
-                                            alimentos, roupas, material didático,<br />
-                                            remédios, dinheiro e etc.
+                                            Você pode ajudar através da doação de alimentos, roupas, material didático, remédios,
+                                            dinheiro e etc.
                                         </S.Paragraph>
                                     </S.ContentSection>
                                     <S.ContentSection>
                                         <SubTitle text='Quem será beneficiado ?' />
                                         <S.Paragraph>
-                                            Toda arrecadação coletada, será levada a pontos de distribução,
-                                            separada,<br /> e depois entregue a pessoa em situação de vunerabilidade
-                                            de acordo com<br /> sua maior necessidade.
+                                            Toda arrecadação coletada, será levada a pontos de distribução, separada, e depois
+                                            entregue a pessoa em situação de vunerabilidade de acordo com sua maior necessidade.
+                                        </S.Paragraph>
+                                    </S.ContentSection>
+                                    <S.ContentSection>
+                                        <SubTitle text='Quais organizações estão responsaveis pela distribuição?' />
+                                        <S.Paragraph>
+                                            As instituições encarregadas de fazer a distribuição de todas arrecadações
+                                            são a Ong Naação(Alimentos), Cihesel(Remedios), e a Lar Casa Bela(Materiais
+                                            Didático e outros).
+                                        </S.Paragraph>
+                                    </S.ContentSection>
+                                    <S.ContentSection>
+                                        <SubTitle text='Sou uma pessoa necessitada, posso aderir algum recurso?' />
+                                        <S.Paragraph>
+                                            Se precisa de ajuda, indicamos que preenchar o formulario ao lado, e assim que possivel
+                                            entraremos em contato o mais rapido possivel para avaliação da sua situação, com a
+                                            confirmação da sua situação, acionaremos as instituições que mais atende sua necessidade.
                                         </S.Paragraph>
                                     </S.ContentSection>
                                 </S.ContentBox>
@@ -73,14 +106,16 @@ export default function help() {
                                     </S.Paragraph>
                                     <Input value={name} change={(e: any) => setName(e.target.value)} />
                                     <S.Paragraph>
-                                        E-mail:
+                                        E-mail *:
                                     </S.Paragraph>
                                     <Input value={email} change={(e: any) => setEmail(e.target.value)} />
                                     <S.Paragraph>
-                                        Dúvida ou sugestão:
+                                        Dúvida ou sugestão *:
                                     </S.Paragraph>
-                                    <TextArea value={description} change={(e: any) => setDescription(e.target.value)} />
-                                    <Button text='Enviar' action={() => { sendForm() }} />
+                                    <S.BoxTextArea>
+                                        <TextArea value={description} change={(e: any) => setDescription(e.target.value)} />
+                                    </S.BoxTextArea>
+                                    <Button text='Enviar' action={() => sendForm()} disabled={isValid} />
                                 </S.FormSend>
                             </S.AlignContent>
                         </S.Centralize>
@@ -95,7 +130,7 @@ export default function help() {
                         <EmailSend width={80} stroke='#FF844B' />
                         <SubTitle text='Agradecemos o contato!' />
                         <S.Paragraph>
-                            Em breve entraremos em contato através do seu email<br/>
+                            Em breve entraremos em contato através do seu email<br />
                         </S.Paragraph>
                         <S.ParagrafhBold>
                             {name && <>Sr/a. </>}{name}

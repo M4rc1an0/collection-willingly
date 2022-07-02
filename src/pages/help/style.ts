@@ -55,6 +55,7 @@ export const ContainerTitle = styled.div`
 `
 
 export const ContentBox = styled.div`
+    width: 50%;
     display: flex;
     flex-direction: column;
 `
@@ -74,6 +75,10 @@ export const FormSend = styled.div`
     width: 25%;
     display: flex;
     flex-direction: column;
+`
+
+export const BoxTextArea = styled.div`
+    width: 400px;
 `
 
 export const ContentSection = styled.div`

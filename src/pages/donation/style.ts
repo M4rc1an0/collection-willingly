@@ -130,20 +130,31 @@ export const ContentSpace = styled.div`
 
 export const ContentQrCode = styled.div`
     background-color: #fff;
-    border: 2px solid #FF844B;
+    border: 2px solid #000;
     padding: 20px;
 `
 
 export const ContentMaps = styled.div`
     display: flex;
-    width: 70%;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: center;
     margin-top: 20px;
 `
 
 export const CenterItens = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+
+export const CenterMaps = styled.div`
+    display: flex; 
+    flex-direction: column;
+    background-color: rgb(0,0,0,0.7);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
     justify-content: center;
     align-items: center;
 `

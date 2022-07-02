@@ -6,7 +6,7 @@ import { Heart, HeartDonation, Notebook, Person, Topic, Shield, Snack } from "..
 
 export default function homePage() {
     const [data, setData] = useState<any>()
-    const [isOpen, setIsOpen] = useState(false)
+    const [validation, setValidation] = useState('')
 
     useEffect(() => {
         axios.get('https://collection-willingly-7a1b4-default-rtdb.firebaseio.com/collection_willingly/pages/home_page.json')
@@ -15,11 +15,33 @@ export default function homePage() {
             })
     }, [])
 
+    const selectIcon = (icon: string) => {
+        if (icon === 'snack') {
+            return <Snack width={75} stroke="#2cb349" />
+        } else if (icon === 'heart') {
+            return <Heart width={75} stroke="#f84949" />
+        } else if (icon === 'notebook') {
+            return <Notebook width={75} />
+        } else if (icon === 'shield') {
+            return <Shield width={75} stroke="#484dda" />
+        }
+    }
+
+    if (typeof window !== undefined) {
+        useEffect(() => {
+            const url = window.location.href
+            setValidation(url)
+
+        }, [])
+    }
+
+    const block = validation.split('/')[3]
+
     return (
         <>
             <S.ContainerHome>
                 <S.ContentTop>
-                    <Header />
+                    <Header active={block} />
                     <S.ImgCarrousel>
                         <S.ImgBanner src='./criança-feliz.jpg' />
                         <S.ContentImg>
@@ -42,58 +64,20 @@ export default function homePage() {
                     <S.ContentBox>
                         <SubTitle text='VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA' />
                         <S.ContentButtonCards>
-                            <Card width='250px'>
-                                <S.ContentInfoBox>
-                                    <S.ParagrafhBold>Saúde</S.ParagrafhBold>
-                                    <Heart width={75} stroke="#f84949" />
-                                    <S.Paragrafh>
-                                        O seu apoio ajuda a
-                                        reduzir a mortalidade
-                                        infantil e promove um
-                                        crescimento saudável de
-                                        crianças no mundo todo.
-                                    </S.Paragrafh>
-                                </S.ContentInfoBox>
-                            </Card>
-                            <Card width='250px'>
-                                <S.ContentInfoBox>
-                                    <S.ParagrafhBold>Educação</S.ParagrafhBold>
-                                    <Notebook width={75} />
-                                    <S.Paragrafh>
-                                        Sua doação mantém
-                                        salas de aula em campos
-                                        de refugiados para que
-                                        as crianças tenham
-                                        acesso à educação.
-                                    </S.Paragrafh>
-                                </S.ContentInfoBox>
-                            </Card>
-                            <Card width='250px'>
-                                <S.ContentInfoBox>
-                                    <S.ParagrafhBold>Proteção</S.ParagrafhBold>
-                                    <Shield width={75} stroke="#484dda" />
-                                    <S.Paragrafh>
-                                        Sua contribuição reforça
-                                        iniciativas que
-                                        garante direitos de
-                                        proteção contra abusos
-                                        de crianças e adolescentes.
-                                    </S.Paragrafh>
-                                </S.ContentInfoBox>
-                            </Card>
-                            <Card width='250px'>
-                                <S.ContentInfoBox>
-                                    <S.ParagrafhBold>Refeição</S.ParagrafhBold>
-                                    <Snack width={75} stroke="#2cb349" />
-                                    <S.Paragrafh>
-                                        O Alimento doado ajuda
-                                        grande quantidade de
-                                        pessoas em situação de
-                                        extrema pobreza e garante
-                                        a refeição no dia-a-dia.
-                                    </S.Paragrafh>
-                                </S.ContentInfoBox>
-                            </Card>
+                            {data && Object.entries(data?.buttons).map((content: any) => {
+                                console.log(content[1].icon, 'icones')
+                                return (
+                                    <Card width='250px'>
+                                        <S.ContentInfoBox>
+                                            <S.ParagrafhBold>{content[1].title}</S.ParagrafhBold>
+                                            {selectIcon(content[1].icon)}
+                                            <S.Paragrafh>
+                                                {content[1].text_content}
+                                            </S.Paragrafh>
+                                        </S.ContentInfoBox>
+                                    </Card>
+                                )
+                            })}
                         </S.ContentButtonCards>
                     </S.ContentBox>
                     <S.ContentInfoBox>
@@ -132,8 +116,8 @@ export default function homePage() {
                             <S.ParagrafhBold color="#FF844B">
                                 na saúde e fortaleça inúmeras pessoas e famílias.
                             </S.ParagrafhBold>
-                            <HeartDonation width={200} stroke="#f84949"/>
-                            <Button text="Doar" />
+                            <HeartDonation width={200} stroke="#f84949" />
+                            <Button text="Doar" action={() => window.location.href = '/donation'} />
                         </S.ContentDonate>
                     </S.ContentInfoBox>
                 </S.ContentTop>
