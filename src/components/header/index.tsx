@@ -34,7 +34,7 @@ const Header = ({active}: HeaderProps) => {
                 mockMenu.map(menu => {
                     const {text, link, hover} = menu
                     return(
-                        <S.TitleMenu active={hover} href={link}>{text}</S.TitleMenu>
+                        <S.TitleMenu key={text + link} active={hover} href={link}>{text}</S.TitleMenu>
                     )
                 })
             }

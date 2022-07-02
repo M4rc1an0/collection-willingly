@@ -9,11 +9,15 @@ export default function homePage() {
     const [validation, setValidation] = useState('')
 
     useEffect(() => {
-        axios.get('https://collection-willingly-7a1b4-default-rtdb.firebaseio.com/collection_willingly/pages/home_page.json')
+        axios.get('https://collection-willingly-7a1b4-default-rtdb.firebaseio.com/collection_willingly.json')
             .then(function (response) {
                 setData(response.data)
             })
     }, [])
+
+    const moreDonate = data && Object.entries(data.donation_score).filter((donation: any) => donation[1].number_donaton > 3000)
+
+    console.log(moreDonate, 'mostrar')
 
     const selectIcon = (icon: string) => {
         if (icon === 'snack') {
@@ -64,10 +68,9 @@ export default function homePage() {
                     <S.ContentBox>
                         <SubTitle text='VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA' />
                         <S.ContentButtonCards>
-                            {data && Object.entries(data?.buttons).map((content: any) => {
-                                console.log(content[1].icon, 'icones')
+                            {data && Object.entries(data?.pages.home_page.buttons).map((content: any) => {
                                 return (
-                                    <Card width='250px'>    
+                                    <Card width='250px' key={content[0]}>    
                                         <S.ContentInfoBox>
                                             <S.ParagrafhBold>{content[1].title}</S.ParagrafhBold>
                                             {selectIcon(content[1].icon)}
@@ -92,11 +95,11 @@ export default function homePage() {
                                 <S.Img src='./imagem-pobreza.jpg' />
                                 <S.ContentUl>
                                     <S.Ul>
-                                        {data && Object.entries(data?.benefit_list).map((benefit: any) => {
+                                        {data && Object.entries(data?.pages.home_page.benefit_list).map((benefit: any) => {
                                             return (
-                                                <S.Li>
+                                                <S.Li key={benefit[0]}>
                                                     <Topic stroke='#FF844B' />
-                                                    <S.ParagrafhBold key={benefit[0]}>
+                                                    <S.ParagrafhBold >
                                                         {benefit[1].text}
                                                     </S.ParagrafhBold>
                                                 </S.Li>
@@ -105,6 +108,12 @@ export default function homePage() {
                                     </S.Ul>
                                 </S.ContentUl>
                             </S.BenefitsDiv>
+                            {moreDonate?.map((instituition: any) => {
+                                return <>
+                                    {instituition[1].organization}
+                                    {instituition[1].number_donaton}
+                                </>
+                            })}
                         </S.ContentBenefits>
                     </S.ContentInfoBox>
                     <S.ContentInfoBox>

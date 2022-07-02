@@ -5,7 +5,8 @@ interface TitleProps {
     size?: number
     color?: string
 }
-const Title = ({text, size, color}: any) => {
+
+const Title = ({text, size, color}: TitleProps) => {
     return (
         <S.BoxTitle>
             <S.TextTitle color={color} size={size}>
