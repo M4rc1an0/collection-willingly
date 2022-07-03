@@ -70,7 +70,7 @@ export default function homePage() {
                         <S.ContentButtonCards>
                             {data && Object.entries(data?.pages.home_page.buttons).map((content: any) => {
                                 return (
-                                    <Card width='250px' key={content[0]}>    
+                                    <Card width='250px' key={content[0]}>
                                         <S.ContentInfoBox>
                                             <S.ParagrafhBold>{content[1].title}</S.ParagrafhBold>
                                             {selectIcon(content[1].icon)}
@@ -108,12 +108,27 @@ export default function homePage() {
                                     </S.Ul>
                                 </S.ContentUl>
                             </S.BenefitsDiv>
-                            {moreDonate?.map((instituition: any) => {
-                                return <>
-                                    {instituition[1].organization}
-                                    {instituition[1].number_donaton}
-                                </>
-                            })}
+                            <S.ContentInstituitions>
+                                <SubTitle text='Organizações que mais receberam doações através da nossa aplicação' size={32} />
+                                <S.UlTable>
+                                    <S.table>
+                                        <S.ParagrafhBold>Organização</S.ParagrafhBold>
+                                        <S.ParagrafhBold>Doação</S.ParagrafhBold>
+                                    </S.table>
+                                    {moreDonate?.map((instituition: any) => {
+                                        return (
+                                            <S.ItemList>
+                                                <S.LiItem>
+                                                    {instituition[1].organization}
+                                                </S.LiItem>
+                                                <S.LiItem>
+                                                    {instituition[1].number_donaton}
+                                                </S.LiItem>
+                                            </S.ItemList>
+                                        )
+                                    })}
+                                </S.UlTable>
+                            </S.ContentInstituitions>
                         </S.ContentBenefits>
                     </S.ContentInfoBox>
                     <S.ContentInfoBox>

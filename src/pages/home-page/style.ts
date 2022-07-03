@@ -127,6 +127,40 @@ export const BenefitsDiv = styled.div`
     width: 100%;
 `
 
+export const ContentInstituitions = styled.div`
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+export const table = styled.div`
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+`
+
+export const UlTable = styled.ul`
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+`
+
+export const ItemList = styled.div`
+    display: flex;
+    justify-content: space-between;
+
+    :nth-child(even) {
+        background-color: #9FC9DD;
+    }
+`
+
+export const LiItem = styled.li`
+    list-style: none;
+    margin: 5px 30px;
+`
+
 export const ContentUl = styled.div`
     margin-left: 50px;
     display: flex;
