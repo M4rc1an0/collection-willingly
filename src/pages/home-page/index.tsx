@@ -113,7 +113,7 @@ export default function homePage() {
                                 <S.UlTable>
                                     <S.table>
                                         <S.ParagrafhBold>Organização</S.ParagrafhBold>
-                                        <S.ParagrafhBold>Doação</S.ParagrafhBold>
+                                        <S.ParagrafhBold>Doações</S.ParagrafhBold>
                                     </S.table>
                                     {moreDonate?.map((instituition: any) => {
                                         return (
