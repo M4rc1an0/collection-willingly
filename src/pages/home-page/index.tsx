@@ -47,7 +47,7 @@ export default function homePage() {
                 <S.ContentTop>
                     <Header active={block} />
                     <S.ImgCarrousel>
-                        <S.ImgBanner src='./criança-feliz.jpg' />
+                        <Carrousel />
                         <S.ContentImg>
                             <Title text='SOBRE' color='#fff' />
                             <S.BoxInformation>
@@ -83,23 +83,47 @@ export default function homePage() {
                             })}
                         </S.ContentButtonCards>
                     </S.ContentBox>
+                    <S.ContentInstituitions>
+                        <SubTitle text='Organizações que mais receberam doações através da nossa aplicação' size={32} />
+                        <S.UlTable>
+                            <S.table>
+                                <S.ParagrafhBold>Organização</S.ParagrafhBold>
+                                <S.ParagrafhBold>Doações</S.ParagrafhBold>
+                            </S.table>
+                            {moreDonate?.map((instituition: any) => {
+                                return (
+                                    <S.ItemList>
+                                        <S.LiItem>
+                                            {instituition[1].organization}
+                                        </S.LiItem>
+                                        <S.LiItem>
+                                            {instituition[1].number_donaton}
+                                        </S.LiItem>
+                                    </S.ItemList>
+                                )
+                            })}
+                        </S.UlTable>
+                    </S.ContentInstituitions>
                     <S.ContentInfoBox>
                         <S.ContentBenefits>
-                            <SubTitle text='Como é feita a arrecadação ?' />
-                            <S.ContentInfoBox>
-                                <S.Paragrafh size={20}>
-                                    Toda arrecadação feita será separada e destinada a diversos pontos de arrecadação beneficiente como:
-                                </S.Paragrafh>
-                            </S.ContentInfoBox>
-                            <S.BenefitsDiv>
-                                <S.Img src='./imagem-pobreza.jpg' />
+                            <S.Img src='./imagem_4.jpg' />
+                            <S.ContentImageBox>
+                            <SubTitle text='Como é feita a arrecadação ?' color="#fff"/>
+                                <S.DescriptionDonation>
+                                    <S.Paragrafh size={20} color="#fff">
+                                        Toda arrecadação obtida, é destinada a e enviada pra alguma organização de doação,
+                                        levando em consideração o tipo de arrecadação (Alimentos, Roupas e etc.) e depois entregue a pessoas
+                                        em situação de necessidade.<br /><br /> Pontos de arrecadação que indicamos para se fazer uma doação:
+                                    </S.Paragrafh>
+                                </S.DescriptionDonation>
+                                <S.BenefitsDiv>
                                 <S.ContentUl>
                                     <S.Ul>
                                         {data && Object.entries(data?.pages.home_page.benefit_list).map((benefit: any) => {
                                             return (
                                                 <S.Li key={benefit[0]}>
-                                                    <Topic stroke='#FF844B' />
-                                                    <S.ParagrafhBold >
+                                                    <Topic stroke='#fff' />
+                                                    <S.ParagrafhBold color="#fff">
                                                         {benefit[1].text}
                                                     </S.ParagrafhBold>
                                                 </S.Li>
@@ -108,27 +132,7 @@ export default function homePage() {
                                     </S.Ul>
                                 </S.ContentUl>
                             </S.BenefitsDiv>
-                            <S.ContentInstituitions>
-                                <SubTitle text='Organizações que mais receberam doações através da nossa aplicação' size={32} />
-                                <S.UlTable>
-                                    <S.table>
-                                        <S.ParagrafhBold>Organização</S.ParagrafhBold>
-                                        <S.ParagrafhBold>Doações</S.ParagrafhBold>
-                                    </S.table>
-                                    {moreDonate?.map((instituition: any) => {
-                                        return (
-                                            <S.ItemList>
-                                                <S.LiItem>
-                                                    {instituition[1].organization}
-                                                </S.LiItem>
-                                                <S.LiItem>
-                                                    {instituition[1].number_donaton}
-                                                </S.LiItem>
-                                            </S.ItemList>
-                                        )
-                                    })}
-                                </S.UlTable>
-                            </S.ContentInstituitions>
+                            </S.ContentImageBox>
                         </S.ContentBenefits>
                     </S.ContentInfoBox>
                     <S.ContentInfoBox>

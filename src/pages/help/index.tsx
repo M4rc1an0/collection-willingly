@@ -50,7 +50,7 @@ export default function help() {
             <S.Container>
                 <Header active={block} />
                 <S.ImgBox>
-                    <S.ImgBanner src="./abraçoAjuda.jpg" />
+                    <S.ImgBanner src="./imagem_6.jpg" />
                     <S.ContentImg>
                         <Title text='Preciso de ajuda !' color='#fff' />
                         <Here width={60} stroke='#FF844B' />

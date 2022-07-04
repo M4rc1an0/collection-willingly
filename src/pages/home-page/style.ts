@@ -82,7 +82,6 @@ export const TitleParagrafh = styled.h2`
 export const Paragrafh = styled.p<TextProps>`
     text-align: center;
     font-size: ${props => props.size ? props.size : 16}px;
-    margin: 20px 0;
     color: ${props => props.color ? props.color : '#4E7D96'};
 `
 
@@ -94,6 +93,21 @@ export const ContentBox = styled.div`
     width: 100%;
 `
 
+export const ContentImageBox = styled.div`
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 100px;
+    width: 100%;
+    background-color: rgb(0,0,0,0.7);
+`
+
+export const DescriptionDonation = styled.div`
+    padding: 20px;
+    margin: 0 300px;
+`
+
 export const BoxImg = styled.div`
     width: 500px;
     height: 250px;
@@ -101,8 +115,10 @@ export const BoxImg = styled.div`
 `
 
 export const Img = styled.img`
+    position: relative;
+    width: 100%;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    mask-image: linear-gradient( to top, transparent, white, transparent );
 `
 
 export const ContentInfoBox = styled.div`
@@ -117,8 +133,8 @@ export const ContentBenefits = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    margin-top: 20px;
 `
 
 export const BenefitsDiv = styled.div`
@@ -162,7 +178,6 @@ export const LiItem = styled.li`
 `
 
 export const ContentUl = styled.div`
-    margin-left: 50px;
     display: flex;
     align-items: center;
 `
@@ -175,7 +190,6 @@ export const Li = styled.li`
     display: flex;
     align-items: center;
     list-style: none;
-    margin: 20px 0;
 `
 
 export const ContentDonate = styled.div`

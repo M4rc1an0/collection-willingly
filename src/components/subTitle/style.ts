@@ -6,7 +6,6 @@ interface SubTitleProps {
 }
 
 export const BoxTitle = styled.div`
-    margin: 10px 0;
     padding: 5px;
 `
 
