@@ -17,8 +17,6 @@ export default function homePage() {
 
     const moreDonate = data && Object.entries(data.donation_score).filter((donation: any) => donation[1].number_donaton > 3000)
 
-    console.log(moreDonate, 'mostrar')
-
     const selectIcon = (icon: string) => {
         if (icon === 'snack') {
             return <Snack width={75} stroke="#2cb349" />
@@ -68,9 +66,9 @@ export default function homePage() {
                     <S.ContentBox>
                         <SubTitle text='VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA' />
                         <S.ContentButtonCards>
-                            {data && Object.entries(data?.pages.home_page.buttons).map((content: any) => {
+                            {data && Object.entries(data?.pages.home_page.buttons).map((content: any, index: any) => {
                                 return (
-                                    <Card width='250px' key={content[0]}>
+                                    <Card width='250px' key={index}>
                                         <S.ContentInfoBox>
                                             <S.ParagrafhBold>{content[1].title}</S.ParagrafhBold>
                                             {selectIcon(content[1].icon)}
@@ -90,9 +88,9 @@ export default function homePage() {
                                 <S.ParagrafhBold>Organização</S.ParagrafhBold>
                                 <S.ParagrafhBold>Doações</S.ParagrafhBold>
                             </S.table>
-                            {moreDonate?.map((instituition: any) => {
+                            {moreDonate?.map((instituition: any, index: string) => {
                                 return (
-                                    <S.ItemList>
+                                    <S.ItemList key={index}>
                                         <S.LiItem>
                                             {instituition[1].organization}
                                         </S.LiItem>
@@ -104,6 +102,11 @@ export default function homePage() {
                             })}
                         </S.UlTable>
                     </S.ContentInstituitions>
+                    <S.ContentInstituitions>
+                        <SubTitle text="Total de usuários redirecionados para doação:"/>
+                        <SubTitle text={data?.score} size={30} color="#FF844B"/>
+                    </S.ContentInstituitions>
+
                     <S.ContentInfoBox>
                         <S.ContentBenefits>
                             <S.Img src='./imagem_4.jpg' />
@@ -119,9 +122,9 @@ export default function homePage() {
                                 <S.BenefitsDiv>
                                 <S.ContentUl>
                                     <S.Ul>
-                                        {data && Object.entries(data?.pages.home_page.benefit_list).map((benefit: any) => {
+                                        {data && Object.entries(data?.pages.home_page.benefit_list).map((benefit: any, index: any) => {
                                             return (
-                                                <S.Li key={benefit[0]}>
+                                                <S.Li key={index}>
                                                     <Topic stroke='#fff' />
                                                     <S.ParagrafhBold color="#fff">
                                                         {benefit[1].text}

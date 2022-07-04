@@ -7,7 +7,7 @@ const Carrousel = () => {
 
     return (
         <S.ImgBanner>
-            <Carousel autoPlay infiniteLoop interval={5000} transitionTime={1000}>
+            <Carousel autoPlay infiniteLoop interval={5000} transitionTime={1000} showThumbs={false}>
                 <div>
                     <S.Img src='./imagem_1.jpg' />
                 </div>

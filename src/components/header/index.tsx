@@ -31,10 +31,10 @@ const Header = ({active}: HeaderProps) => {
             <S.Line/>
             <S.BoxMenu>
             {
-                mockMenu.map(menu => {
+                mockMenu.map((menu, index) => {
                     const {text, link, hover} = menu
                     return(
-                        <S.TitleMenu key={text + link} active={hover} href={link}>{text}</S.TitleMenu>
+                        <S.TitleMenu key={index} active={hover} href={link}>{text}</S.TitleMenu>
                     )
                 })
             }

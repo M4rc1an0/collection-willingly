@@ -12,7 +12,7 @@ export const Section = styled.div<PropsSection>`
     font-family: 'Lato', sans-serif;
 `
 
-export const BoxParagrafh = styled.button<PropsSection>`
+export const BoxParagrafh = styled.div<PropsSection>`
     border: none;
     display: flex;
     justify-content: center;
