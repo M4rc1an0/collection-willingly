@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import * as S from "./style";
-import { Header, Title, SubTitle, Input, Button, Footer, CardButton, Carrousel, Card } from "../../components";
+import { Header, Title, SubTitle, Button, Footer, Carrousel, Card } from "../../components";
 import { Heart, HeartDonation, Notebook, Person, Topic, Shield, Snack } from "../../assets/icons";
 
 export default function homePage() {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Bank, Clothes, Restaurant, Money, Notebook, Others, QrCode, Resources, Here } from "../../assets/icons";
+import { Bank, Clothes, Restaurant, Money, Notebook, QrCode, Resources, Here } from "../../assets/icons";
 import { Footer, Header, Title, SubTitle, Button, Card } from "../../components";
 import QRCode from "react-qr-code";
 import * as S from "./style";

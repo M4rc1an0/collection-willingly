@@ -1,9 +1,7 @@
 import React from 'react'
-import Head from 'next/head'
 import * as S from './home'
 import Link from 'next/link'
 import { ArrowRight, World } from '../assets/icons'
-import { NextPage } from 'next'
 
 const Home = () => {
   return (
