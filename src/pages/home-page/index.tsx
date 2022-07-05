@@ -6,10 +6,10 @@ import { Heart, HeartDonation, Notebook, Person, Topic, Shield, Snack } from "..
 
 export default function homePage() {
     const [data, setData] = useState<any>()
-    const [validation, setValidation] = useState('')
+    const [validation, setValidation] = useState("")
 
     useEffect(() => {
-        axios.get('https://collection-willingly-7a1b4-default-rtdb.firebaseio.com/collection_willingly.json')
+        axios.get("https://collection-willingly-7a1b4-default-rtdb.firebaseio.com/collection_willingly.json")
             .then(function (response) {
                 setData(response.data)
             })
@@ -18,13 +18,13 @@ export default function homePage() {
     const moreDonate = data && Object.entries(data.donation_score).filter((donation: any) => donation[1].number_donaton > 3000)
 
     const selectIcon = (icon: string) => {
-        if (icon === 'snack') {
+        if (icon === "snack") {
             return <Snack width={75} stroke="#2cb349" />
-        } else if (icon === 'heart') {
+        } else if (icon === "heart") {
             return <Heart width={75} stroke="#f84949" />
-        } else if (icon === 'notebook') {
+        } else if (icon === "notebook") {
             return <Notebook width={75} />
-        } else if (icon === 'shield') {
+        } else if (icon === "shield") {
             return <Shield width={75} stroke="#484dda" />
         }
     }
@@ -37,7 +37,7 @@ export default function homePage() {
         }, [])
     }
 
-    const block = validation.split('/')[3]
+    const block = validation.split("/")[3]
 
     return (
         <>
@@ -47,9 +47,9 @@ export default function homePage() {
                     <S.ImgCarrousel>
                         <Carrousel />
                         <S.ContentImg>
-                            <Title text='SOBRE' color='#fff' />
+                            <Title text="SOBRE" color="#fff" />
                             <S.BoxInformation>
-                                <Person width={60} stroke='#FF844B' />
+                                <Person width={60} stroke="#FF844B" />
                                 <S.CardParagraph>
                                     Collection Willingly tem como intuito possibilitar<br />
                                     que projetos sociais tenham mais visibilidade e ajuda,<br />
@@ -64,11 +64,11 @@ export default function homePage() {
                         </S.ContentImg>
                     </S.ImgCarrousel>
                     <S.ContentBox>
-                        <SubTitle text='VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA' />
+                        <SubTitle text="VEJA COMO SUA DOAÇÃO FAZ A DIFERENÇA" />
                         <S.ContentButtonCards>
                             {data && Object.entries(data?.pages.home_page.buttons).map((content: any, index: any) => {
                                 return (
-                                    <Card width='250px' key={index}>
+                                    <Card width="250px" key={index}>
                                         <S.ContentInfoBox>
                                             <S.ParagrafhBold>{content[1].title}</S.ParagrafhBold>
                                             {selectIcon(content[1].icon)}
@@ -82,7 +82,7 @@ export default function homePage() {
                         </S.ContentButtonCards>
                     </S.ContentBox>
                     <S.ContentInstituitions>
-                        <SubTitle text='Organizações que mais receberam doações através da nossa aplicação' size={32} />
+                        <SubTitle text="Organizações que mais receberam doações através da nossa aplicação" size={32} />
                         <S.UlTable>
                             <S.table>
                                 <S.ParagrafhBold>Organização</S.ParagrafhBold>
@@ -109,9 +109,9 @@ export default function homePage() {
 
                     <S.ContentInfoBox>
                         <S.ContentBenefits>
-                            <S.Img src='./imagem_4.jpg' />
+                            <S.Img src="./imagem_4.jpg" />
                             <S.ContentImageBox>
-                            <SubTitle text='Como é feita a arrecadação ?' color="#fff"/>
+                            <SubTitle text="Como é feita a arrecadação ?" color="#fff"/>
                                 <S.DescriptionDonation>
                                     <S.Paragrafh size={20} color="#fff">
                                         Toda arrecadação obtida, é destinada a e enviada pra alguma organização de doação,
@@ -125,7 +125,7 @@ export default function homePage() {
                                         {data && Object.entries(data?.pages.home_page.benefit_list).map((benefit: any, index: any) => {
                                             return (
                                                 <S.Li key={index}>
-                                                    <Topic stroke='#fff' />
+                                                    <Topic stroke="#fff" />
                                                     <S.ParagrafhBold color="#fff">
                                                         {benefit[1].text}
                                                     </S.ParagrafhBold>
@@ -140,7 +140,7 @@ export default function homePage() {
                     </S.ContentInfoBox>
                     <S.ContentInfoBox>
                         <S.ContentDonate>
-                            <SubTitle text='Faça uma doação!' size={32} />
+                            <SubTitle text="Faça uma doação!" size={32} />
                             <S.ParagrafhBold color="#FF844B">
                                 Faça parte desta rede de solidariedade de humanização<br />
                             </S.ParagrafhBold>
@@ -148,7 +148,7 @@ export default function homePage() {
                                 na saúde e fortaleça inúmeras pessoas e famílias.
                             </S.ParagrafhBold>
                             <HeartDonation width={200} stroke="#f84949" />
-                            <Button text="Doar" action={() => window.location.href = '/donation'} />
+                            <Button text="Doar" action={() => window.location.href = "/donation"} />
                         </S.ContentDonate>
                     </S.ContentInfoBox>
                 </S.ContentTop>

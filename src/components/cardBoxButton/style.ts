@@ -10,7 +10,7 @@ export const Section = styled.div<PropsSection>`
     width: ${props => props.width && props.width};
     margin: 10px;
     display: flex;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
 `
 
 export const BoxParagrafh = styled.button<PropsSection>`

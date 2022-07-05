@@ -20,16 +20,16 @@ export const LogoHeader = styled.a<activeProps>`
     margin: 0 30px;
     padding: 5px 5px;
     cursor: pointer;
-    background-color: ${props => props.active ? '#fff' : '#4E7D96'};
+    background-color: ${props => props.active ? "#fff" : "#4E7D96"};
     border-radius: 50px;
 
     :hover{
-        background-color: ${props => props.active ? '#4E7D96' : '#fff'};
+        background-color: ${props => props.active ? "#4E7D96" : "#fff"};
         border-radius: 50px;
 
         svg {
             path{
-                fill: ${props => props.active ? '#fff' : '#4E7D96'};
+                fill: ${props => props.active ? "#fff" : "#4E7D96"};
             }
         }
     }
@@ -49,8 +49,8 @@ export const BoxMenu = styled.div`
 export const TitleMenu = styled.a<activeProps>`
     font-size: 16px;
     font-weight: bold;
-    color: ${props => props.active ? '#4E7D96' : '#fff'};
-    background-color: ${props => props.active ? '#fff' : '#4E7D96'};
+    color: ${props => props.active ? "#4E7D96" : "#fff"};
+    background-color: ${props => props.active ? "#fff" : "#4E7D96"};
     cursor: pointer;
     padding: 5px 10px;
     margin: 15px;

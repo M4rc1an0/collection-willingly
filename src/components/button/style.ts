@@ -14,7 +14,7 @@ export const Button = styled.button<ActiveProps>`
     padding: 5px 10px;
     margin: 10px;
     border: none;
-    background-color: ${props => props.active ? '#FF844B' : '#fff'};
+    background-color: ${props => props.active ? "#FF844B" : "#fff"};
     font-weight: bold;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;
@@ -57,7 +57,7 @@ export const iconContent = styled.div<ActiveProps>`
 
     svg{
         path{
-            stroke: ${props => props.active ? '#fff' : '#FF844B'};
+            stroke: ${props => props.active ? "#fff" : "#FF844B"};
         }
     }
 
@@ -66,5 +66,5 @@ export const iconContent = styled.div<ActiveProps>`
 export const Paragrafh = styled.p<ActiveProps>`
     font-size: ${props => props.size ? props.size : 16}px;
     margin: 5px 10px;
-    color: ${props => props.active ? '#fff' : '#FF844B'};
+    color: ${props => props.active ? "#fff" : "#FF844B"};
 `

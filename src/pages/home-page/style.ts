@@ -59,7 +59,7 @@ export const ParagrafhBold = styled.p<TextProps>`
     font-size: 20px;
     font-weight: bold;
     margin: 5px 10px;
-    color: ${props => props.color ? props.color : '#4E7D96'};
+    color: ${props => props.color ? props.color : "#4E7D96"};
 `
 
 export const BoxParagrafh = styled.div`
@@ -82,7 +82,7 @@ export const TitleParagrafh = styled.h2`
 export const Paragrafh = styled.p<TextProps>`
     text-align: center;
     font-size: ${props => props.size ? props.size : 16}px;
-    color: ${props => props.color ? props.color : '#4E7D96'};
+    color: ${props => props.color ? props.color : "#4E7D96"};
 `
 
 export const ContentBox = styled.div`

@@ -1,19 +1,19 @@
-import { Copyright, World } from '../../assets/icons'
-import SocialIcon from '../socialIcon'
-import * as S from './style'
+import { Copyright, World } from "../../assets/icons"
+import SocialIcon from "../socialIcon"
+import * as S from "./style"
 
 const Footer = () => {
     return (
         <S.Container>
             <S.ContainerContent>
                 <S.LogoFooter href="/home-page">
-                    <World width={60} stroke='#fff' />
+                    <World width={60} stroke="#fff" />
                 </S.LogoFooter>
                 <S.Line />
                 <S.ContainerSocial>
-                    <SocialIcon icon='facebook' href="https://www.facebook.com/groups/361080610742106"/>
-                    <SocialIcon icon='instagram' href="https://www.instagram.com/lardemaria.iblm/" />
-                    <SocialIcon icon='wpp' href="https://wa.me/5511998189322" />
+                    <SocialIcon icon="facebook" href="https://www.facebook.com/groups/361080610742106"/>
+                    <SocialIcon icon="instagram" href="https://www.instagram.com/lardemaria.iblm/" />
+                    <SocialIcon icon="wpp" href="https://wa.me/5511998189322" />
                 </S.ContainerSocial>
                 <S.Line />
                 <S.RightsReserved>
@@ -21,7 +21,7 @@ const Footer = () => {
                         Todos os direitos reservados
                     </S.Paragraph>
                     <S.IconBox>
-                        <Copyright width={16} stroke='#fff' />
+                        <Copyright width={16} stroke="#fff" />
                     </S.IconBox>
                     <S.Paragraph size={12}>
                         2022 | Desenvolvido por Rogério Marciano

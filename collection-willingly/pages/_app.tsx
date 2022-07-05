@@ -1,4 +1,4 @@
-import { Container, Box } from './styles'
+import { Container, Box } from "./styles"
 
 function Home() {
   return (

@@ -52,7 +52,7 @@ export const ContainerAddress = styled.div`
 export const Paragraph = styled.p<TextProps>`
     text-align: center;
     font-size: ${props => props.size ? props.size : 16}px;
-    color: ${props => props.color ? props.color : '#fff'};
+    color: ${props => props.color ? props.color : "#fff"};
 `
 
 export const RightsReserved = styled.div`

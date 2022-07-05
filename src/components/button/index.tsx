@@ -1,9 +1,9 @@
-import * as S from './style'
+import * as S from "./style"
 
 interface ButtonProps {
     text: string
     action?: () => void
-    icon?: any
+    icon?: JSX.Element
     active?: boolean
     disabled?: boolean
 }

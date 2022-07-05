@@ -77,14 +77,14 @@ export const TitleParagrafh = styled.h2`
 export const Paragrafh = styled.p<TextProps>`
     font-size: ${props => props.size ? props.size : 16}px;
     margin: 5px 0;
-    color: ${props => props.color ? props.color : '#4E7D96'};    
+    color: ${props => props.color ? props.color : "#4E7D96"};    
 `
 
 export const ParagrafhBold = styled.p<TextProps>`
     font-size: ${props => props.size ? props.size : 16}px;
     font-weight: bold;
     margin: 5px 10px;
-    color: ${props => props.color ? props.color : '#4E7D96'};
+    color: ${props => props.color ? props.color : "#4E7D96"};
 `
 
 export const Img = styled.img`

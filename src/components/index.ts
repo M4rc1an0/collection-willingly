@@ -6,8 +6,8 @@ import Button from "./button";
 import Footer from "./footer";
 import SocialIcon from "./socialIcon";
 import SubTitle from "./subTitle";
-import CardButton from './cardButton'
-import Carrousel from './carrousel'
+import CardButton from "./cardButton"
+import Carrousel from "./carrousel"
 import Card from "./card";
 
 export {
